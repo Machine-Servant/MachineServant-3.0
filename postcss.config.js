@@ -1,4 +1,4 @@
-const tailwindcss = require(`tailwindcss`)
+const tailwindcss = require(`tailwindcss`);
 
 module.exports = {
   plugins: [
@@ -8,4 +8,4 @@ module.exports = {
       preset: `default`,
     }),
   ],
-}
+};
