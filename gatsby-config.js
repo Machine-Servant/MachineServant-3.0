@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Tailwind`,
-    description: `An example config of Gatsby + TypeScript + Tailwind CSS`,
-    author: `@gatsbyjs`,
+    title: `MachineServant`,
+    description: `Let us bring your vision to reality.`,
+    author: `@MachineServant`,
+    siteUrl: "https://machineservant.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
