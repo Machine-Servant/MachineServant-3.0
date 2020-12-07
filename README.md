@@ -2,12 +2,12 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-  <a href="https://gatsby-typescript-tailwind.netlify.com/">
-    <img alt="Gatsby TypeScript Tailwind" src="./docs/logo.svg" width="230" />
+  <a href="https://www.machineservant.com">
+    <img alt="MachineServant Logo" src="./docs/logo.jpg" width="500" />
   </a>
 </p>
 <h1 align="center">
-Gatsby TypeScript Tailwind
+MachineServant
 </h1>
 
 ## 🚀 Quick start
@@ -17,8 +17,8 @@ Gatsby TypeScript Tailwind
     Navigate into your new site’s directory and start it up.
 
     ```zsh
-    git clone https://github.com/impulse/gatsby-typescript-tailwind
-    cd gatsby-typescript-tailwind/
+    git clone https://github.com/Machine-Servant/machineservant-3.0
+    cd machineservant-3.0/
     gatsby develop
     ```
 
@@ -28,7 +28,7 @@ Gatsby TypeScript Tailwind
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `gatsby-typescript-tailwind` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
+    Open the `machineservant-3.0` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
 
 ## 🎓 Learning Gatsby
 
