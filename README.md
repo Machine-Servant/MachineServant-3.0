@@ -1,8 +1,7 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-
 <p align="center">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://gatsby-typescript-tailwind.netlify.com/">
     <img alt="Gatsby TypeScript Tailwind" src="./docs/logo.svg" width="230" />
   </a>
@@ -39,21 +38,21 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## License
-
-MIT
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Jarrku"><img src="https://avatars3.githubusercontent.com/u/7694752?v=4" width="100px;" alt="Simon VDB"/><br /><sub><b>Simon VDB</b></sub></a><br /><a href="https://github.com/impulse/gatsby-typescript-tailwind/commits?author=Jarrku" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.machineservant.com/"><img src="https://avatars3.githubusercontent.com/u/264836?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Evan Stern</b></sub></a><br /><a href="https://github.com/Machine-Servant/MachineServant-3.0/commits?author=evanstern" title="Code">💻</a> <a href="#blog-evanstern" title="Blogposts">📝</a> <a href="#business-evanstern" title="Business development">💼</a> <a href="#content-evanstern" title="Content">🖋</a> <a href="#design-evanstern" title="Design">🎨</a> <a href="#maintenance-evanstern" title="Maintenance">🚧</a> <a href="#security-evanstern" title="Security">🛡️</a> <a href="#infra-evanstern" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

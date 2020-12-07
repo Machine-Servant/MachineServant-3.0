@@ -1,23 +1,31 @@
 {
+  "projectName": "MachineServant-3.0",
+  "projectOwner": "Machine-Servant",
+  "repoType": "github",
+  "repoHost": "https://github.com",
   "files": [
     "README.md"
   ],
   "imageSize": 100,
-  "commit": false,
+  "commit": true,
+  "commitConvention": "none",
   "contributors": [
     {
-      "login": "Jarrku",
-      "name": "Simon VDB",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/7694752?v=4",
-      "profile": "https://github.com/Jarrku",
+      "login": "evanstern",
+      "name": "Evan Stern",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/264836?v=4",
+      "profile": "https://www.machineservant.com/",
       "contributions": [
-        "code"
+        "code",
+        "blog",
+        "business",
+        "content",
+        "design",
+        "maintenance",
+        "security",
+        "infra"
       ]
     }
   ],
-  "contributorsPerLine": 7,
-  "projectName": "gatsby-typescript-tailwind",
-  "projectOwner": "impulse",
-  "repoType": "github",
-  "repoHost": "https://github.com"
+  "contributorsPerLine": 7
 }
