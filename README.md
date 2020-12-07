@@ -1,8 +1,13 @@
-<p align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-  <a href="https://www.machineservant.com">
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Machine-Servant_MachineServant-3.0&metric=alert_status)](https://sonarcloud.io/dashboard?id=Machine-Servant_MachineServant-3.0)
+
+<p align="center">
+ <a href="https://www.machineservant.com">
     <img alt="MachineServant Logo" src="./docs/logo.jpg" width="500" />
   </a>
 </p>
