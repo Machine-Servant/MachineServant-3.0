@@ -3,7 +3,25 @@ module.exports = {
     title: `MachineServant`,
     description: `Let us bring your vision to reality.`,
     author: `@MachineServant`,
-    siteUrl: 'https://machineservant.com',
+    siteUrl: 'https://dev.machineservant.com',
+    image: '/images/logo.jpg',
+    contact: `contact@machineservant.com`,
+    keywords: [
+      'MachineServant',
+      'Machine Servant',
+      'Software Development',
+      'Website Development',
+      'Software Shop',
+      'Development Agency',
+      'Akron',
+      'Cleveland',
+      'Ohio',
+    ],
+    social: {
+      linkedIn: 'https://www.linkedin.com/company/machineservant/',
+      facebook: 'https://www.facebook.com/MachineServant/',
+      instagram: 'https://www.instagram.com/machineservant/',
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +30,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
       },
     },
     {
@@ -34,11 +59,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `MachineServant`,
+        short_name: `machineservant`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#337cc1`,
+        theme_color: `#337cc1`,
         display: `minimal-ui`,
         icon: `docs/logo.png`, // This path is relative to the root of the site.
       },

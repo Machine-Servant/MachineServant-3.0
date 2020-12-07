@@ -5,6 +5,14 @@ type SiteMetadataProps = {
   description: string;
   author: string;
   siteUrl: string;
+  image: string;
+  contact: string;
+  keywords: string[];
+  social: {
+    facebook: string;
+    linkedIn: string;
+    instagram: string;
+  };
 };
 
 type SiteMetadataQueryProps = {
@@ -22,6 +30,14 @@ export const useSiteMetadata = (): SiteMetadataProps => {
           description
           author
           siteUrl
+          image
+          contact
+          keywords
+          social {
+            facebook
+            linkedIn
+            instagram
+          }
         }
       }
     }
