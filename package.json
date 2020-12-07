@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-typescript-tailwind",
+  "name": "machineservant-3.0",
   "private": false,
-  "description": "A gatsby starter kit using TypeScript and Tailwind CSS",
-  "version": "0.1.250",
-  "author": "Florentin Eckl <ecklf@icloud.com>",
+  "description": "MachineServant business home page",
+  "version": "0.1.3",
+  "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -48,11 +48,9 @@
   "keywords": [
     "gatsby",
     "typescript",
-    "tailwind",
-    "tailwind css",
-    "starter"
+    "MachineServant"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext ts,tsx",
@@ -65,10 +63,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/impulse/gatsby-typescript-tailwind"
+    "url": "https://github.com/Machine-Servant/MachineServant-3.0"
   },
   "bugs": {
-    "url": "https://github.com/impulse/gatsby-typescript-tailwind/issues"
+    "url": "https://github.com/Machine-Servant/MachineServant-3.0/issues"
   },
   "husky": {
     "hooks": {
