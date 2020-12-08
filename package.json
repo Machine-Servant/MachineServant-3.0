@@ -2,7 +2,7 @@
   "name": "machineservant-3.0",
   "private": false,
   "description": "MachineServant business home page",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "react": "17.0.1",
@@ -45,7 +45,7 @@
     "gatsby-transformer-sharp": "2.8.0",
     "husky": "4.3.5",
     "lint-staged": "10.5.3",
-    "postcss": "8.1.14",
+    "postcss": "8.2.0",
     "prettier": "2.2.1",
     "tailwindcss": "2.0.1",
     "twin.macro": "^2.0.5",
