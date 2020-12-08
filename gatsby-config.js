@@ -22,6 +22,20 @@ module.exports = {
       facebook: 'https://www.facebook.com/MachineServant/',
       instagram: 'https://www.instagram.com/machineservant/',
     },
+    navigation: [
+      {
+        name: 'Services',
+        path: '/services',
+      },
+      {
+        name: 'Contact',
+        path: '/contact',
+      },
+      {
+        name: 'Blog',
+        path: '/blog',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -81,6 +95,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-image`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

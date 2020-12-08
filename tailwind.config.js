@@ -53,6 +53,9 @@ module.exports = {
           900: '#193d5f',
         },
       },
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+      },
     },
   },
   variants: {

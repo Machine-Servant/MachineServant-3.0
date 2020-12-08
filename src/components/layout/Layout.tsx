@@ -21,20 +21,17 @@ export const Layout: React.FC<LayoutProps> = ({
   content,
   children,
 }) => (
-  <main>
+  <main className="font-raleway">
     <Header />
     {image ? (
-      <div className="relative mb-4">
+      <div className="relative">
         <HeaderImage
           fluid={image}
           alt={imageAlt}
           imgStyle={{ objectFit: 'cover' }}
-          isLargeImage
+          isLargeImage={isLargeImage}
         />
         <div className="top-0 left-0 flex-col justify-center hidden w-full h-full text-white shadow-xl sm:absolute sm:flex">
-          {content}
-        </div>
-        <div className="container p-4 mx-auto shadow-sm sm:hidden bg-purple-heart-100">
           {content}
         </div>
       </div>
