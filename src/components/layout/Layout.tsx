@@ -21,7 +21,7 @@ export const Layout: React.FC<LayoutProps> = ({
   content,
   children,
 }) => (
-  <main className="font-raleway">
+  <main className="font-light font-raleway">
     <Header />
     {image ? (
       <div className="relative">

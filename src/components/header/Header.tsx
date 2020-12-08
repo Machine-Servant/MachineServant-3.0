@@ -24,6 +24,7 @@ export const Header: React.FC = () => {
           <StaticImage
             src="../../../static/images/logo-small.png"
             height={35}
+            width={35}
             alt={title}
             blurredOptions={{}}
             transformOptions={{}}

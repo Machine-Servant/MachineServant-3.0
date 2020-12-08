@@ -20,7 +20,9 @@ export const ServiceCard: React.FC<ServiceCardType> = ({
         <Image className="lg:max-h-40" fluid={image} alt={title} />
       </div>
       <div className="flex flex-col h-full text-center bg-gray-200 justify-evenly">
-        <h3 className="pt-8 text-xl uppercase justify-self-start">{title}</h3>
+        <span className="inline-block pt-8 text-xl uppercase justify-self-start">
+          {title}
+        </span>
         <p className="p-6">{children}</p>
       </div>
     </div>

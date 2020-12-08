@@ -97,6 +97,36 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: 'Raleway',
+            variants: [
+              '100',
+              '200',
+              '300',
+              '400',
+              '500',
+              '600',
+              '700',
+              '800',
+              '900',
+              '100i',
+              '200i',
+              '300i',
+              '400i',
+              '500i',
+              '600i',
+              '700i',
+              '800i',
+              '900i',
+            ],
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

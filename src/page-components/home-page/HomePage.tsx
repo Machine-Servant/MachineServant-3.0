@@ -96,6 +96,7 @@ export const HomePage: React.FC = () => {
           <StaticImage
             className="inline-block"
             height={70}
+            width={70}
             src="../../../static/images/logo-small.png"
             alt={title}
             transformOptions={{}}
