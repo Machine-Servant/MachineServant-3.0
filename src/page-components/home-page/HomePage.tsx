@@ -17,6 +17,7 @@ import { ServiceCard } from './components/service-card';
 import { FeatureCard } from './components/feature-card';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ImageSharpFluidProps } from '../../types';
+import { Testimonial } from './components/testimonial';
 
 type HomePageQueryProps = {
   headerImage: ImageSharpFluidProps;
@@ -25,6 +26,7 @@ type HomePageQueryProps = {
   webApplication: ImageSharpFluidProps;
   projectManagement: ImageSharpFluidProps;
   features: ImageSharpFluidProps;
+  engeloRumoraProfile: ImageSharpFluidProps;
 };
 
 export const HomePage: React.FC = () => {
@@ -35,6 +37,7 @@ export const HomePage: React.FC = () => {
     coding,
     webApplication,
     projectManagement,
+    engeloRumoraProfile,
   } = useStaticQuery<HomePageQueryProps>(graphql`
     query HomePageQuery {
       headerImage: file(relativePath: { eq: "home-page-header.jpg" }) {
@@ -73,6 +76,15 @@ export const HomePage: React.FC = () => {
         }
       }
       projectManagement: file(relativePath: { eq: "project-management.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      engeloRumoraProfile: file(
+        relativePath: { eq: "engelorumora-profile.jpeg" }
+      ) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -214,6 +226,21 @@ export const HomePage: React.FC = () => {
           If you want changes, you'll get changes. As many as you need until
           you're happy with the results.
         </FeatureCard>
+      </div>
+      <div className="py-12 bg-gray-100">
+        <Testimonial
+          image={engeloRumoraProfile.childImageSharp.fluid}
+          imageOrientation="left"
+          name="Engelo Rumora"
+          company="OhioCashFlow"
+        >
+          "After countless individuals and companies along with hundreds of
+          thousands of dollars in losses, we have finally found a company that
+          we trust. Machine Servant is affordable, efficient and they definitely
+          know their stuff. Led by Evan who is not only a true professional but
+          through our working relationship has also become a friend. I highly
+          recommend taking them on for any project that you have in mind."
+        </Testimonial>
       </div>
     </Layout>
   );
