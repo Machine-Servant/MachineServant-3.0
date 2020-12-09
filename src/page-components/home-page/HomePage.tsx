@@ -1,13 +1,22 @@
 import React from 'react';
 
+import {
+  faPhone,
+  faPiggyBank,
+  faClock,
+  faCog,
+  faClipboardCheck,
+} from '@fortawesome/free-solid-svg-icons';
 import { graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
+import { ServiceCard } from './components/service-card';
+import { FeatureCard } from './components/feature-card';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ImageSharpFluidProps } from '../../types';
-import { ServiceCard } from './components/service-card';
 
 type HomePageQueryProps = {
   headerImage: ImageSharpFluidProps;
@@ -15,11 +24,13 @@ type HomePageQueryProps = {
   coding: ImageSharpFluidProps;
   webApplication: ImageSharpFluidProps;
   projectManagement: ImageSharpFluidProps;
+  features: ImageSharpFluidProps;
 };
 
 export const HomePage: React.FC = () => {
   const {
     headerImage,
+    features,
     websiteDesign,
     coding,
     webApplication,
@@ -27,6 +38,13 @@ export const HomePage: React.FC = () => {
   } = useStaticQuery<HomePageQueryProps>(graphql`
     query HomePageQuery {
       headerImage: file(relativePath: { eq: "home-page-header.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      features: file(relativePath: { eq: "features.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -156,6 +174,46 @@ export const HomePage: React.FC = () => {
             bringing your project to life in your timeframe.
           </ServiceCard>
         </div>
+      </div>
+      <div className="relative">
+        <Image
+          className="h-60 lg:h-auto"
+          fluid={features.childImageSharp.fluid}
+          alt="Programmers working"
+        />
+        <div className="absolute top-0 left-0 z-10 w-full h-full bg-gray-900 opacity-30" />
+        <div className="absolute top-0 left-0 z-20 flex flex-col justify-center w-full h-full text-center text-white">
+          <span className="inline-block text-4xl font-bold uppercase">
+            features
+          </span>
+          <span className="inline-block text-lg">Going Above and Beyond</span>
+        </div>
+      </div>
+      <div className="container justify-between max-w-5xl py-12 mx-auto lg:flex">
+        <FeatureCard title="Free Phone Consultation" icon={faPhone}>
+          No robots here! From consultation to design, building, publishing, and
+          maintenance - we only offer one on one human interaction every step of
+          the way.
+        </FeatureCard>
+        <FeatureCard title="Cost Effective" icon={faPiggyBank}>
+          After all, we work for small and midsize businesses. Our prices are
+          competitively affordable just for businesses like yours. Schedule a
+          call to discuss our rates.
+        </FeatureCard>
+        <FeatureCard title="Fast Results" icon={faClock}>
+          Need to start now? We're fast, quick, speedy, and snappy! However you
+          put it, you'll get your website or web application in your timeframe
+          with the best quality results.
+        </FeatureCard>
+        <FeatureCard title="In Depth Knowledge" icon={faCog}>
+          Our highly trained team will go the distance in every aspect. Whether
+          you want more traffic, higher sales, or increased awareness - we'll
+          create solutions based on your consumer needs and company goals.
+        </FeatureCard>
+        <FeatureCard title="Satisfaction Guaranteed" icon={faClipboardCheck}>
+          If you want changes, you'll get changes. As many as you need until
+          you're happy with the results.
+        </FeatureCard>
       </div>
     </Layout>
   );
