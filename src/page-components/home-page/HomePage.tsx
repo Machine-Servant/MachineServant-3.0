@@ -13,6 +13,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
+import { FullSection } from '../../styles';
+
 import { ServiceCard } from './components/service-card';
 import { FeatureCard } from './components/feature-card';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
@@ -154,7 +156,7 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="container py-12 mx-auto">
+      <FullSection container>
         <div className="text-center">
           <span className="text-4xl text-black uppercase">Services</span>
         </div>
@@ -186,7 +188,7 @@ export const HomePage: React.FC = () => {
             bringing your project to life in your timeframe.
           </ServiceCard>
         </div>
-      </div>
+      </FullSection>
       <div className="relative">
         <Image
           className="h-60 lg:h-auto"
@@ -201,7 +203,7 @@ export const HomePage: React.FC = () => {
           <span className="inline-block text-lg">Going Above and Beyond</span>
         </div>
       </div>
-      <div className="container justify-between max-w-5xl py-12 mx-auto lg:flex">
+      <FullSection container className="justify-between max-w-5xl lg:flex">
         <FeatureCard title="Free Phone Consultation" icon={faPhone}>
           No robots here! From consultation to design, building, publishing, and
           maintenance - we only offer one on one human interaction every step of
@@ -226,8 +228,8 @@ export const HomePage: React.FC = () => {
           If you want changes, you'll get changes. As many as you need until
           you're happy with the results.
         </FeatureCard>
-      </div>
-      <div className="py-12 bg-gray-100">
+      </FullSection>
+      <FullSection className="bg-gray-100">
         <Testimonial
           image={engeloRumoraProfile.childImageSharp.fluid}
           imageOrientation="left"
@@ -241,7 +243,7 @@ export const HomePage: React.FC = () => {
           through our working relationship has also become a friend. I highly
           recommend taking them on for any project that you have in mind."
         </Testimonial>
-      </div>
+      </FullSection>
     </Layout>
   );
 };
