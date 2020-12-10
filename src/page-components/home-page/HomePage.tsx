@@ -157,36 +157,38 @@ export const HomePage: React.FC = () => {
         </div>
       </div>
       <FullSection container>
-        <div className="text-center">
-          <span className="text-4xl text-black uppercase">Services</span>
-        </div>
-        <div className="mt-12 lg:flex lg:justify-between">
-          <ServiceCard
-            title="Website Design"
-            image={websiteDesign.childImageSharp.fluid}
-          >
-            Functional and beautiful outcomes with hierarchy, balance, space,
-            alignments and contrast creating the perfect eye flow.
-          </ServiceCard>
-          <ServiceCard title="Coding" image={coding.childImageSharp.fluid}>
-            Top notch knowledge and expertise on all your coding needs. We're
-            the experts. We know our stuff.
-          </ServiceCard>
-          <ServiceCard
-            title="Web + Software Development"
-            image={webApplication.childImageSharp.fluid}
-          >
-            If you have a great idea for a product, we have top-notch solutions!
-            We'll handle the heavy lifting and let you keep coming up with
-            amazing ideas.
-          </ServiceCard>
-          <ServiceCard
-            title="Project Management"
-            image={projectManagement.childImageSharp.fluid}
-          >
-            We will manage your project one on one, every step of the way,
-            bringing your project to life in your timeframe.
-          </ServiceCard>
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
+            <span className="text-4xl text-black uppercase">Services</span>
+          </div>
+          <div className="mt-12 lg:flex lg:justify-between">
+            <ServiceCard
+              title="Website Design"
+              image={websiteDesign.childImageSharp.fluid}
+            >
+              Functional and beautiful outcomes with hierarchy, balance, space,
+              alignments and contrast creating the perfect eye flow.
+            </ServiceCard>
+            <ServiceCard title="Coding" image={coding.childImageSharp.fluid}>
+              Top notch knowledge and expertise on all your coding needs. We're
+              the experts. We know our stuff.
+            </ServiceCard>
+            <ServiceCard
+              title="Web + Software Development"
+              image={webApplication.childImageSharp.fluid}
+            >
+              If you have a great idea for a product, we have top-notch
+              solutions! We'll handle the heavy lifting and let you keep coming
+              up with amazing ideas.
+            </ServiceCard>
+            <ServiceCard
+              title="Project Management"
+              image={projectManagement.childImageSharp.fluid}
+            >
+              We will manage your project one on one, every step of the way,
+              bringing your project to life in your timeframe.
+            </ServiceCard>
+          </div>
         </div>
       </FullSection>
       <div className="relative">
@@ -203,31 +205,34 @@ export const HomePage: React.FC = () => {
           <span className="inline-block text-lg">Going Above and Beyond</span>
         </div>
       </div>
-      <FullSection container className="justify-between max-w-5xl lg:flex">
-        <FeatureCard title="Free Phone Consultation" icon={faPhone}>
-          No robots here! From consultation to design, building, publishing, and
-          maintenance - we only offer one on one human interaction every step of
-          the way.
-        </FeatureCard>
-        <FeatureCard title="Cost Effective" icon={faPiggyBank}>
-          After all, we work for small and midsize businesses. Our prices are
-          competitively affordable just for businesses like yours. Schedule a
-          call to discuss our rates.
-        </FeatureCard>
-        <FeatureCard title="Fast Results" icon={faClock}>
-          Need to start now? We're fast, quick, speedy, and snappy! However you
-          put it, you'll get your website or web application in your timeframe
-          with the best quality results.
-        </FeatureCard>
-        <FeatureCard title="In Depth Knowledge" icon={faCog}>
-          Our highly trained team will go the distance in every aspect. Whether
-          you want more traffic, higher sales, or increased awareness - we'll
-          create solutions based on your consumer needs and company goals.
-        </FeatureCard>
-        <FeatureCard title="Satisfaction Guaranteed" icon={faClipboardCheck}>
-          If you want changes, you'll get changes. As many as you need until
-          you're happy with the results.
-        </FeatureCard>
+      <FullSection container className="">
+        <div className="justify-between mx-auto lg:max-w-5xl lg:flex">
+          <FeatureCard title="Free Phone Consultation" icon={faPhone}>
+            No robots here! From consultation to design, building, publishing,
+            and maintenance - we only offer one on one human interaction every
+            step of the way.
+          </FeatureCard>
+          <FeatureCard title="Cost Effective" icon={faPiggyBank}>
+            After all, we work for small and midsize businesses. Our prices are
+            competitively affordable just for businesses like yours. Schedule a
+            call to discuss our rates.
+          </FeatureCard>
+          <FeatureCard title="Fast Results" icon={faClock}>
+            Need to start now? We're fast, quick, speedy, and snappy! However
+            you put it, you'll get your website or web application in your
+            timeframe with the best quality results.
+          </FeatureCard>
+          <FeatureCard title="In Depth Knowledge" icon={faCog}>
+            Our highly trained team will go the distance in every aspect.
+            Whether you want more traffic, higher sales, or increased awareness
+            - we'll create solutions based on your consumer needs and company
+            goals.
+          </FeatureCard>
+          <FeatureCard title="Satisfaction Guaranteed" icon={faClipboardCheck}>
+            If you want changes, you'll get changes. As many as you need until
+            you're happy with the results.
+          </FeatureCard>
+        </div>
       </FullSection>
       <FullSection className="bg-gray-100">
         <Testimonial
