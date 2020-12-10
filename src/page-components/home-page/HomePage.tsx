@@ -13,13 +13,14 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
-import { FullSection } from '../../styles';
+import { FullSection, Input, Textarea } from '../../styles';
 
 import { ServiceCard } from './components/service-card';
 import { FeatureCard } from './components/feature-card';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ImageSharpFluidProps } from '../../types';
 import { Testimonial } from './components/testimonial';
+import { SectionHeader } from './styles';
 
 type HomePageQueryProps = {
   headerImage: ImageSharpFluidProps;
@@ -29,6 +30,7 @@ type HomePageQueryProps = {
   projectManagement: ImageSharpFluidProps;
   features: ImageSharpFluidProps;
   engeloRumoraProfile: ImageSharpFluidProps;
+  contactUs: ImageSharpFluidProps;
 };
 
 export const HomePage: React.FC = () => {
@@ -40,6 +42,7 @@ export const HomePage: React.FC = () => {
     webApplication,
     projectManagement,
     engeloRumoraProfile,
+    contactUs,
   } = useStaticQuery<HomePageQueryProps>(graphql`
     query HomePageQuery {
       headerImage: file(relativePath: { eq: "home-page-header.jpg" }) {
@@ -87,6 +90,13 @@ export const HomePage: React.FC = () => {
       engeloRumoraProfile: file(
         relativePath: { eq: "engelorumora-profile.jpeg" }
       ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      contactUs: file(relativePath: { eq: "contact-us.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -159,7 +169,7 @@ export const HomePage: React.FC = () => {
       <FullSection container>
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
-            <span className="text-4xl text-black uppercase">Services</span>
+            <SectionHeader>Services</SectionHeader>
           </div>
           <div className="mt-12 lg:flex lg:justify-between">
             <ServiceCard
@@ -248,6 +258,46 @@ export const HomePage: React.FC = () => {
           through our working relationship has also become a friend. I highly
           recommend taking them on for any project that you have in mind."
         </Testimonial>
+      </FullSection>
+      <FullSection container>
+        <div className="px-4 mx-auto lg:max-w-5xl lg:px-0">
+          <div className="mb-12 text-center">
+            <SectionHeader>Contact Us</SectionHeader>
+          </div>
+          <div className="flex flex-col justify-between sm:flex-row">
+            <Image
+              className="w-full mb-12 sm:w-1/2 sm:mb-0"
+              fluid={contactUs.childImageSharp.fluid}
+              alt="Programmers doing their thing"
+            />
+            <div className="w-full sm:w-1/2">
+              <form
+                className="flex flex-col pl-6 mx-auto lg:px-12 sm:pr-0"
+                data-netlify="true"
+                netlify-honeypot="true"
+                name="contact"
+                method="POST"
+              >
+                <Input type="hidden" name="form-name" value="contact" />
+                <Input type="text" name="name" placeholder="Name" />
+                <Input type="text" name="subject" placeholder="Subject" />
+                <Input type="email" name="email" placeholder="Email" />
+                <Textarea
+                  className="mt-4"
+                  rows={7}
+                  name="message"
+                  placeholder="Type your message here..."
+                />
+                <button
+                  className="w-full py-4 mt-4 text-sm text-white transition-colors duration-300 bg-lochmara-500 hover:bg-black"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </FullSection>
     </Layout>
   );

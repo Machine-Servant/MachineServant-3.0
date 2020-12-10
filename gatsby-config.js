@@ -21,6 +21,7 @@ module.exports = {
       linkedIn: 'https://www.linkedin.com/company/machineservant/',
       facebook: 'https://www.facebook.com/MachineServant/',
       instagram: 'https://www.instagram.com/machineservant/',
+      github: 'https://github.com/machine-servant/',
     },
     navigation: [
       {

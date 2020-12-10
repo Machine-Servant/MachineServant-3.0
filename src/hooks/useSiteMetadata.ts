@@ -12,6 +12,7 @@ type SiteMetadataProps = {
     facebook: string;
     linkedIn: string;
     instagram: string;
+    github: string;
   };
   navigation: {
     name: string;
@@ -41,6 +42,7 @@ export const useSiteMetadata = (): SiteMetadataProps => {
             facebook
             linkedIn
             instagram
+            github
           }
           navigation {
             name
