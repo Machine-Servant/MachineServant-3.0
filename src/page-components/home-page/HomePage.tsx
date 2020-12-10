@@ -18,7 +18,7 @@ import { FullSection, Input, Textarea } from '../../styles';
 import { ServiceCard } from './components/service-card';
 import { FeatureCard } from './components/feature-card';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-import { ImageSharpFluidProps } from '../../types';
+import { ImageSharpFluidProps } from '../../@types/types';
 import { Testimonial } from './components/testimonial';
 import { SectionHeader } from './styles';
 
