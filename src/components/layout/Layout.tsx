@@ -11,7 +11,7 @@ type LayoutProps = {
   image?: FluidObject;
   imageAlt?: string;
   isLargeImage?: boolean;
-  content: React.ReactNode;
+  content?: React.ReactNode;
 };
 
 export const Layout: React.FC<LayoutProps> = ({
@@ -31,9 +31,11 @@ export const Layout: React.FC<LayoutProps> = ({
           imgStyle={{ objectFit: 'cover' }}
           isLargeImage={isLargeImage}
         />
-        <div className="top-0 left-0 flex-col justify-center hidden w-full h-full text-white shadow-xl sm:absolute sm:flex">
-          {content}
-        </div>
+        {content && (
+          <div className="top-0 left-0 flex-col justify-center hidden w-full h-full text-white shadow-xl sm:absolute sm:flex">
+            {content}
+          </div>
+        )}
       </div>
     ) : null}
     {children}

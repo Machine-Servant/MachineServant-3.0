@@ -94,6 +94,10 @@ export const SEO: React.FC<SEOProps> = ({
           content: title,
         },
         {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
           name: 'twitter:description',
           content: description || siteDescription,
         },
@@ -116,10 +120,6 @@ export const SEO: React.FC<SEOProps> = ({
                 {
                   property: 'og:image:height',
                   content: image && image.height ? `${image.height}` : '',
-                },
-                {
-                  name: 'twitter:card',
-                  content: 'summary_large_image',
                 },
               ]
             : [
