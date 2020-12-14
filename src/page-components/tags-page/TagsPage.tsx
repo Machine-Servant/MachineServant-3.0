@@ -54,7 +54,7 @@ export const TagsPage: React.FC = () => {
           Back to blog list page
         </Link>
       </div>
-      <div className="container flex flex-wrap items-center justify-between max-w-5xl pb-12 mx-auto">
+      <div className="container flex flex-wrap items-center max-w-5xl pb-12 mx-auto justify-evenly lg:justify-between">
         {sortedTags.map((tag) => (
           <Tag value={tag.fieldValue} count={tag.totalCount} />
         ))}
