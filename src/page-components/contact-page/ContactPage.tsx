@@ -9,6 +9,7 @@ import { Layout } from '../../components/layout';
 import { ContactForm } from '../../components/contact-form';
 import { FullSection } from '../../styles';
 import { SEO } from '../../components/seo';
+import { CalendlyEmbed } from '../../components/calendly-embed';
 
 type ContactPageQueryProps = {
   contactImage: ImageSharpFluidProps;
@@ -46,8 +47,8 @@ export const ContactPage: React.FC = () => {
         description="Want a great website or application? Call, email or send us a message!"
       />
       <FullSection className="bg-gray-100">
-        <div className="flex items-start max-w-4xl mx-auto">
-          <div className="w-1/2">
+        <div className="flex flex-col items-start max-w-4xl mx-auto lg:flex-row">
+          <div className="w-auto lg:w-1/2">
             <div className="flex items-center justify-center mb-8">
               <StaticImage
                 className="inline-block"
@@ -58,13 +59,13 @@ export const ContactPage: React.FC = () => {
                 transformOptions={{}}
                 blurredOptions={{}}
               />
-              <span className="text-4xl font-bold text-black uppercase">
+              <span className="text-2xl font-bold text-black uppercase md:text-4xl">
                 {title}
               </span>
             </div>
             <div className="flex flex-col justify-between px-12">
               <div>
-                <span className="text-2xl font-medium uppercase">
+                <span className="text-xl font-medium uppercase lg:text-2xl">
                   Located in Akron, Ohio
                 </span>
                 <p className="text-lg">
@@ -92,10 +93,13 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="w-full pr-6 mt-8 lg:w-1/2 lg:pr-0 lg:mt-0">
             <ContactForm />
           </div>
         </div>
+      </FullSection>
+      <FullSection>
+        <CalendlyEmbed account="machineservant" eventName="30min" />
       </FullSection>
     </Layout>
   );
