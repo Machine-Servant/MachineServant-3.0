@@ -115,37 +115,42 @@ export const HomePage: React.FC = () => {
       imageAlt="MachineServant"
       isLargeImage
       content={
-        <div className="container px-4 mx-auto xl:px-0">
-          <span className="block text-lg">At {title} we</span>
-          <span className="block text-3xl font-bold uppercase">
-            Design + Build + Manage
-          </span>
-          <span className="block text-lg">
-            websites, web applications, software, and more.
-          </span>
-          <div className="hidden sm:block">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+        <>
+          <div className="container z-20 px-4 mx-auto xl:px-0">
+            <span className="block text-lg">At {title} we</span>
+            <span className="block text-3xl font-bold uppercase">
+              Design + Build + Manage
+            </span>
+            <span className="block text-lg">
+              websites, web applications, software, and more.
+            </span>
+            <div className="hidden sm:block">
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
           </div>
-        </div>
+          <div className="absolute top-0 left-0 z-10 w-full h-full bg-gray-900 opacity-30" />
+        </>
       }
     >
       <SEO title="home" />
-      <div className="py-24 bg-gray-100">
+      <div className="py-8 bg-gray-100 lg:py-24">
         <div className="flex items-center justify-center w-full mb-4">
-          <StaticImage
-            className="inline-block"
-            height={70}
-            width={70}
-            src="../../../static/images/logo-small.png"
-            alt={title}
-            transformOptions={{}}
-            blurredOptions={{}}
-          />
-          <span className="text-3xl font-bold text-black uppercase sm:text-5xl">
+          <div className="hidden lg:inline-block">
+            <StaticImage
+              className="inline-block"
+              height={70}
+              width={70}
+              src="../../../static/images/logo-small.png"
+              alt={title}
+              transformOptions={{}}
+              blurredOptions={{}}
+            />
+          </div>
+          <span className="text-xl font-bold text-black uppercase lg:text-3xl sm:text-5xl">
             {title}
           </span>
         </div>
