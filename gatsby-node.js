@@ -41,7 +41,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: BlogPaginated,
       context: {
         limit: postsPerPage,
-        skip: i,
+        skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
         totalCount: result.data.allMarkdownRemark.edges.length,
