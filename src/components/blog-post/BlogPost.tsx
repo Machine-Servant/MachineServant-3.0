@@ -3,6 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrown, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import RehypeReact from 'rehype-react';
+import { DiscussionEmbed } from 'disqus-react';
 
 import { ImageSharpFluidProps } from '../../@types/types';
 import { Layout } from '../../components/layout';
@@ -55,6 +56,14 @@ export const BlogPost: React.FC<BlogPostProps> = (props) => {
     data: { markdownRemark: post },
   } = props;
 
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_SHORTNAME || '',
+    config: {
+      identifier: post.parent.relativeDirectory,
+      title: post.frontmatter.title,
+    },
+  };
+
   return (
     <Layout
       image={post.frontmatter.featuredImage.childImageSharp.fluid}
@@ -89,6 +98,8 @@ export const BlogPost: React.FC<BlogPostProps> = (props) => {
           // @ts-ignore
           renderAst(post.htmlAst)
         }
+        <hr className="mb-8" />
+        <DiscussionEmbed {...disqusConfig} />
       </MainContent>
     </Layout>
   );
