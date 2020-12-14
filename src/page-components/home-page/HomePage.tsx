@@ -11,14 +11,15 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import { ImageSharpFluidProps } from '../../@types/types';
 import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
-import { FullSection, Input, Textarea } from '../../styles';
+import { ContactForm } from '../../components/contact-form';
+import { FullSection } from '../../styles';
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 
 import { ServiceCard } from './components/service-card';
 import { FeatureCard } from './components/feature-card';
-import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-import { ImageSharpFluidProps } from '../../@types/types';
 import { Testimonial } from './components/testimonial';
 import { SectionHeader } from './styles';
 
@@ -175,17 +176,23 @@ export const HomePage: React.FC = () => {
             <ServiceCard
               title="Website Design"
               image={websiteDesign.childImageSharp.fluid}
+              highlightColor="blue"
             >
               Functional and beautiful outcomes with hierarchy, balance, space,
               alignments and contrast creating the perfect eye flow.
             </ServiceCard>
-            <ServiceCard title="Coding" image={coding.childImageSharp.fluid}>
+            <ServiceCard
+              title="Coding"
+              image={coding.childImageSharp.fluid}
+              highlightColor="gold"
+            >
               Top notch knowledge and expertise on all your coding needs. We're
               the experts. We know our stuff.
             </ServiceCard>
             <ServiceCard
               title="Web + Software Development"
               image={webApplication.childImageSharp.fluid}
+              highlightColor="purple"
             >
               If you have a great idea for a product, we have top-notch
               solutions! We'll handle the heavy lifting and let you keep coming
@@ -194,6 +201,7 @@ export const HomePage: React.FC = () => {
             <ServiceCard
               title="Project Management"
               image={projectManagement.childImageSharp.fluid}
+              highlightColor="green"
             >
               We will manage your project one on one, every step of the way,
               bringing your project to life in your timeframe.
@@ -271,30 +279,7 @@ export const HomePage: React.FC = () => {
               alt="Programmers doing their thing"
             />
             <div className="w-full sm:w-1/2">
-              <form
-                className="flex flex-col pl-6 mx-auto lg:px-12 sm:pr-0"
-                data-netlify="true"
-                netlify-honeypot="true"
-                name="contact"
-                method="POST"
-              >
-                <Input type="hidden" name="form-name" value="contact" />
-                <Input type="text" name="name" placeholder="Name" />
-                <Input type="text" name="subject" placeholder="Subject" />
-                <Input type="email" name="email" placeholder="Email" />
-                <Textarea
-                  className="mt-4"
-                  rows={7}
-                  name="message"
-                  placeholder="Type your message here..."
-                />
-                <button
-                  className="w-full py-4 mt-4 text-sm text-white transition-colors duration-300 bg-lochmara-500 hover:bg-black"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>

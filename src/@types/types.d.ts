@@ -11,3 +11,10 @@ declare type ImageSharpFixedProps = {
     fixed: FixedObject;
   };
 };
+
+declare type ColorOptions = 'green' | 'blue' | 'gold' | 'purple';
+
+declare type TagsGroupProps = {
+  fieldValue: string;
+  totalCount: number;
+};

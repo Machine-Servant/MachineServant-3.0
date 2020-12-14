@@ -6,6 +6,7 @@ import { Layout } from '../../components/layout';
 import { ImageSharpFluidProps } from '../../@types/types';
 import { FullSection } from '../../styles';
 import { ServiceCard } from './components/service-card';
+import { SEO } from '../../components/seo';
 
 type ServicesPageProps = {
   servicesPage: ImageSharpFluidProps;
@@ -87,6 +88,7 @@ export const ServicesPage: React.FC = () => {
         </>
       }
     >
+      <SEO title="Services" description="Your Vision. Our Solutions." />
       <FullSection className="font-medium text-center" container>
         <h1 className="mb-4 text-4xl uppercase">What we offer</h1>
         <p className="max-w-xl mx-auto leading-relaxed">
@@ -101,6 +103,7 @@ export const ServicesPage: React.FC = () => {
           image={consulting.childImageSharp.fluid}
           imageAlt="Two people at a computers with shared paper"
           orientation="left"
+          highlightColor="blue"
         >
           We provide you and your company with consulting and analysis based on
           the latest technologies to help you make the best choices to achieve
@@ -112,6 +115,7 @@ export const ServicesPage: React.FC = () => {
           image={development.childImageSharp.fluid}
           imageAlt="Woman looking at her laptop and phone"
           orientation="right"
+          highlightColor="gold"
         >
           Let our team of expert developers build your project. We can take over
           an existing codebase, or build you something from scratch. We will
@@ -124,6 +128,7 @@ export const ServicesPage: React.FC = () => {
           image={management.childImageSharp.fluid}
           imageAlt="People with coffee at a meeting"
           orientation="left"
+          highlightColor="green"
         >
           We have a strong commitment to Project Management. We’re always
           working to ensure our clients’ needs get the attention they deserve.
@@ -135,6 +140,7 @@ export const ServicesPage: React.FC = () => {
           image={design.childImageSharp.fluid}
           imageAlt="Notebook beside an iphone on a table"
           orientation="right"
+          highlightColor="purple"
         >
           Developing a strong user interface is essential if you're looking to
           attract interest and attention with your target audience. At
@@ -146,6 +152,7 @@ export const ServicesPage: React.FC = () => {
           image={webApp.childImageSharp.fluid}
           imageAlt="Two programmers at work at a table"
           orientation="left"
+          highlightColor="blue"
         >
           Got an idea for the next big thing? We can get there! All of our
           services come together to bring you the most experienced team
