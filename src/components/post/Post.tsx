@@ -26,15 +26,15 @@ export const Post: React.FC<PostProps> = ({
   excerpt,
   parent: { relativeDirectory },
 }) => (
-  <div className="flex max-w-3xl mx-auto mb-8 border border-gray-300 h-72">
-    <div className="flex flex-1 w-5/12">
+  <div className="flex flex-col max-w-3xl mx-4 mb-8 border border-gray-300 shadow-md md:mx-auto md:flex-row md:h-72">
+    <div className="flex flex-1 md:w-5/12 h-60 md:h-auto">
       <Image
         className="w-full"
         fluid={featuredImage.childImageSharp.fluid}
         alt={title}
       />
     </div>
-    <div className="w-7/12">
+    <div className="md:w-7/12">
       <div className="flex flex-col h-full px-8 py-8">
         <div className="flex mb-8">
           <div className="flex flex-col">

@@ -117,8 +117,8 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({
         </>
       )}
       {renderTagList && (
-        <div className="container flex flex-wrap items-center justify-between max-w-5xl mx-auto mt-12">
-          {sortedTags.slice(0, 10).map(({ fieldValue, totalCount }) => (
+        <div className="container flex flex-wrap items-center max-w-5xl mx-auto mt-12 justify-evenly">
+          {sortedTags.slice(0, 5).map(({ fieldValue, totalCount }) => (
             <Tag key={fieldValue} value={fieldValue} count={totalCount} />
           ))}
           <Link to="/tags" className="px-4 py-2 mx-4 mb-4 text-xs underline">
@@ -126,14 +126,14 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({
           </Link>
         </div>
       )}
-      <div className="container py-12 mx-auto">
+      <div className="container pt-8 pb-12 mx-auto lg:py-12">
         {posts.map(({ node: post }) => (
           <Post key={post.id} {...post} />
         ))}
       </div>
       {paginated && (
         <div className="container max-w-5xl mx-auto mb-12">
-          <div className="flex justify-between">
+          <div className="flex justify-around lg:justify-between">
             {backPath ? (
               <Link
                 className="w-32 px-4 py-2 text-lg text-center text-white bg-lochmara-500"
