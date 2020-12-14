@@ -99,6 +99,9 @@ export const ContactPage: React.FC = () => {
         </div>
       </FullSection>
       <FullSection>
+        <h1 className="mb-8 text-3xl font-medium text-center uppercase lg:mb-0">
+          Schedule a consultation
+        </h1>
         <CalendlyEmbed account="machineservant" eventName="30min" />
       </FullSection>
     </Layout>
