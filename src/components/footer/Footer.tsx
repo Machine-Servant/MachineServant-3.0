@@ -28,18 +28,18 @@ export const Footer: React.FC = () => {
               transformOptions={{}}
               blurredOptions={{}}
             />
-            <h3 className="text-xl font-bold text-black uppercase sm:text-xl">
+            <h1 className="text-xl font-bold text-black uppercase sm:text-xl">
               {title}
-            </h3>
+            </h1>
           </div>
           <div className="text-center sm:text-left">
-            <h5>Akron, Ohio</h5>
-            <h5>
+            <h2>Akron, Ohio</h2>
+            <h2>
               <a rel="noreferrer" target="_blank" href="tel:3302853015">
                 (330)-285-3015
               </a>
-            </h5>
-            <h5>
+            </h2>
+            <h2>
               <a
                 className="underline"
                 rel="noreferrer"
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
               >
                 {contact}
               </a>
-            </h5>
+            </h2>
           </div>
         </div>
         <div className="text-center sm:text-left">
@@ -75,14 +75,14 @@ export const Footer: React.FC = () => {
               />
             </a>
           </div>
-          <h5 className="mb-4">
+          <span className="block mb-4">
             <GithubButton href={social.github}>
               Follow me @machine-servant
             </GithubButton>
-          </h5>
-          <h5>
+          </span>
+          <span className="block">
             ©{new Date().getFullYear()} by {title}.
-          </h5>
+          </span>
         </div>
       </div>
     </footer>
