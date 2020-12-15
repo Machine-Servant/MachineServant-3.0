@@ -29,43 +29,43 @@ export const ServicesPage: React.FC = () => {
     query ServicesPageQuery {
       servicesPage: file(relativePath: { eq: "services-page.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       consulting: file(relativePath: { eq: "consulting.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       development: file(relativePath: { eq: "development.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       management: file(relativePath: { eq: "management-and-maintenance.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       design: file(relativePath: { eq: "website-design.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       webApp: file(relativePath: { eq: "web-app-development.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

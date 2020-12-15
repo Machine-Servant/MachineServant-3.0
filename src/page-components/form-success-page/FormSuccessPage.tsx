@@ -14,8 +14,8 @@ export const FormSuccessPage: React.FC = () => {
     query FormSuccessPageQuery {
       formSuccess: file(relativePath: { eq: "contact-success.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

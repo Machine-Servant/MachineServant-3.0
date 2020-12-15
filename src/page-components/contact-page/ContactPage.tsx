@@ -20,8 +20,8 @@ export const ContactPage: React.FC = () => {
     query ContactPageQuery {
       contactImage: file(relativePath: { eq: "contact.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

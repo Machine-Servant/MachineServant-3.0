@@ -14,8 +14,8 @@ const Error404Page: React.FC = () => {
     query Error404PageQuery {
       errorImage: file(relativePath: { eq: "404.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
