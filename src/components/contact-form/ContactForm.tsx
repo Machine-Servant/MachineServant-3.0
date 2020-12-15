@@ -22,7 +22,7 @@ export const ContactForm: React.FC = () => {
       action="/form-success"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <input type="hidden" name="bog-field" />
+      <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
       <Input
         type="text"
