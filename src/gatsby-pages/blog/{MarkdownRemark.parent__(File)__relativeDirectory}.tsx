@@ -22,8 +22,8 @@ export const pageQuery = graphql`
         fromNow: date(fromNow: true)
         featuredImage {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+            fluid(quality: 64) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

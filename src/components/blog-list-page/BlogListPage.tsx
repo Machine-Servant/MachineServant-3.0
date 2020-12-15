@@ -60,8 +60,8 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({
     query BlogPageListPageQuery {
       blogImage: file(relativePath: { eq: "blog.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

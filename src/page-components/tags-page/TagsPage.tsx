@@ -28,8 +28,8 @@ export const TagsPage: React.FC = () => {
       }
       blogImage: file(relativePath: { eq: "blog.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
