@@ -2,7 +2,7 @@
 date: '2020-10-08'
 title: 'GatsbyJS and weatherwidget.io'
 author: 'Evan Stern'
-featuredImage: ./weatherwidgetio.jpg
+featuredImage: ./featured.jpg
 tags:
   [
     'MachineServant',
