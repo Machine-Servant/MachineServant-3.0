@@ -2,7 +2,7 @@
 date: '2020-11-05'
 title: 'How We Use bit and Storybook'
 author: 'Evan Stern'
-featuredImage: ./bit-dev.png
+featuredImage: ./featured.jpg
 tags:
   [
     'bit',

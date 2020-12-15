@@ -2,7 +2,7 @@
 date: '2020-11-02'
 title: 'An Intro to StorybookJS'
 author: 'Evan Stern'
-featuredImage: ./storybook-ui.png
+featuredImage: ./featured.jpg
 tags: ['Storybook', 'Web Development', 'Library', 'React', '3rd Party', 'Tech']
 keywords:
   [
