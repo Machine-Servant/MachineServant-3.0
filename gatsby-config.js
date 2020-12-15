@@ -7,7 +7,7 @@ module.exports = {
     title: `MachineServant`,
     description: `Let us bring your vision to reality.`,
     author: `@MachineServant`,
-    siteUrl: 'https://dev.machineservant.com',
+    siteUrl: 'https://www.machineservant.com',
     image: '/images/logo.jpg',
     contact: `contact@machineservant.com`,
     keywords: [
