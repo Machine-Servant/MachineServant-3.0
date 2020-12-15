@@ -30,8 +30,8 @@ type BlogPostProps = {
           childImageSharp: {
             resize: {
               src: string;
-              width: string;
-              height: string;
+              width: number;
+              height: number;
             };
           };
         };
@@ -83,6 +83,9 @@ export const BlogPost: React.FC<BlogPostProps> = (props) => {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt.replace(/\\n/g, ' ')}
+        image={post.frontmatter.socialImage.childImageSharp.resize}
+        keywords={post.frontmatter.keywords}
+        article
       />
       <MainContent>
         <div className="flex items-center mb-8 text-sm font-extralight">

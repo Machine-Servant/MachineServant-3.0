@@ -136,7 +136,7 @@ export const HomePage: React.FC = () => {
         </>
       }
     >
-      <SEO title="home" />
+      <SEO title="Home" />
       <div className="py-8 bg-gray-100 lg:py-24">
         <div className="flex items-center justify-center w-full mb-4">
           <div className="hidden lg:inline-block">

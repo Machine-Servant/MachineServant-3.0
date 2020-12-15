@@ -101,7 +101,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({
       imageAlt="Blog spelled out in titles"
     >
       <SEO
-        title="blog"
+        title="Blog"
         description="Ideas, discoveries, and technical musings from machineservant.com"
       />
       {tag && (
