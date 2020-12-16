@@ -2,7 +2,9 @@ const path = require('path');
 const { kebabCase } = require('lodash');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+  const { createRedirect, createPage } = actions;
+
+  createRedirect({ fromPath: '/about', toPath: '/services' });
 
   const BlogPaginated = path.resolve('src/templates/BlogPaginated.tsx');
   const TaggedPosts = path.resolve('src/templates/TaggedPosts.tsx');
