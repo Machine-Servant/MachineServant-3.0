@@ -76,16 +76,14 @@ export const ServicesPage: React.FC = () => {
     <Layout
       image={servicesPage.childImageSharp.fluid}
       imageAlt="Laptop keyboard computer"
+      darken
       content={
-        <>
-          <div className="container flex mx-auto">
-            <div className="z-20 w-full text-center text-white">
-              <h1 className="text-4xl font-bold uppercase">Services</h1>
-              <h2 className="text-xl">Your Vision. Our Solutions</h2>
-            </div>
+        <div className="container flex mx-auto">
+          <div className="w-full text-center text-white">
+            <h1 className="text-4xl font-bold uppercase">Services</h1>
+            <h2 className="text-xl">Your Vision. Our Solutions</h2>
           </div>
-          <div className="absolute top-0 left-0 z-10 w-full h-full bg-gray-900 opacity-40" />
-        </>
+        </div>
       }
     >
       <SEO title="Services" description="Your Vision. Our Solutions." />

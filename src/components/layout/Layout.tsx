@@ -12,6 +12,7 @@ type LayoutProps = {
   imageAlt?: string;
   isLargeImage?: boolean;
   content?: React.ReactNode;
+  darken?: boolean;
 };
 
 export const Layout: React.FC<LayoutProps> = ({
@@ -19,6 +20,7 @@ export const Layout: React.FC<LayoutProps> = ({
   imageAlt,
   isLargeImage = false,
   content,
+  darken = false,
   children,
 }) => (
   <main className="font-light font-raleway">
@@ -32,9 +34,14 @@ export const Layout: React.FC<LayoutProps> = ({
           isLargeImage={isLargeImage}
         />
         {content && (
-          <div className="top-0 left-0 flex-col justify-center hidden w-full h-full text-white shadow-xl sm:absolute sm:flex">
-            {content}
-          </div>
+          <>
+            <div className="top-0 left-0 z-20 flex-col justify-center hidden w-full h-full text-white shadow-xl sm:absolute sm:flex">
+              {content}
+            </div>
+            {darken && (
+              <div className="absolute top-0 left-0 z-10 w-full h-full bg-gray-900 opacity-30" />
+            )}
+          </>
         )}
       </div>
     ) : null}
