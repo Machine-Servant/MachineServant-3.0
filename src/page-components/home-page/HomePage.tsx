@@ -263,6 +263,7 @@ export const HomePage: React.FC = () => {
           imageOrientation="left"
           name="Engelo Rumora"
           company="OhioCashFlow"
+          link="https://www.ohiocashflow.com"
         >
           "After countless individuals and companies along with hundreds of
           thousands of dollars in losses, we have finally found a company that
