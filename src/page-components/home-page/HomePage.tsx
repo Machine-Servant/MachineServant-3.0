@@ -114,26 +114,24 @@ export const HomePage: React.FC = () => {
       image={headerImage.childImageSharp.fluid}
       imageAlt="MachineServant"
       isLargeImage
+      darken
       content={
-        <>
-          <div className="container z-20 px-4 mx-auto xl:px-0">
-            <span className="block text-lg">At {title} we</span>
-            <span className="block text-3xl font-bold uppercase">
-              Design + Build + Manage
-            </span>
-            <span className="block text-lg">
-              websites, web applications, software, and more.
-            </span>
-            <div className="hidden sm:block">
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-            </div>
+        <div className="container px-4 mx-auto xl:px-0">
+          <span className="block text-lg">At {title} we</span>
+          <span className="block text-3xl font-bold uppercase">
+            Design + Build + Manage
+          </span>
+          <span className="block text-lg">
+            websites, web applications, software, and more.
+          </span>
+          <div className="hidden sm:block">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
-          <div className="absolute top-0 left-0 z-10 w-full h-full bg-gray-900 opacity-30" />
-        </>
+        </div>
       }
     >
       <SEO title="Home" />
