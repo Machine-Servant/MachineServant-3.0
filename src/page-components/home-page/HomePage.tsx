@@ -160,7 +160,7 @@ export const HomePage: React.FC = () => {
           </div>
           <div className="px-4 text-center sm:text-left sm:px-0">
             <p className="mb-4 sm:mb-0">
-              Your professional source for online inovation.
+              Your professional source for online innovation.
             </p>
             <p>
               {title} is a web design and development shop that can take your
