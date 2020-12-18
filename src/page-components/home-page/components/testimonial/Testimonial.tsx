@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
 import Image, { FluidObject } from 'gatsby-image';
 
 import { ImageWrapper, MainContent } from './styles';
@@ -32,14 +31,14 @@ export const Testimonial: React.FC<TestimonialProps> = ({
       <div className="text-lg">
         <span>{name}</span>,{' '}
         {link ? (
-          <Link
-            to={link}
+          <a
+            href={link}
             className="italic underline"
-            rel="nooreferrer"
+            rel="noreferrer noopener"
             target="_blank"
           >
             {company}
-          </Link>
+          </a>
         ) : (
           <span className="italic">{company}</span>
         )}

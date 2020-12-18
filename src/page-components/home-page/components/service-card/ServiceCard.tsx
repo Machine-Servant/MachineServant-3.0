@@ -17,7 +17,11 @@ export const ServiceCard: React.FC<ServiceCardType> = ({
   image,
   highlightColor,
 }) => (
-  <MainContent className="mb-4 lg:mb-0 lg:flex lg:flex-col">
+  <MainContent
+    highlightColor={highlightColor}
+    to="/services"
+    className="mb-4 transition-colors duration-300 lg:mb-0 lg:flex lg:flex-col"
+  >
     <div className="flex flex-col w-full lg:w-auto lg:flex-1 lg:h-32">
       <div className="lg:mb-2">
         <Image className="lg:max-h-40" fluid={image} alt={title} />

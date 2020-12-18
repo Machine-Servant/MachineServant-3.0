@@ -1,9 +1,27 @@
 import styled from '@emotion/styled';
 import tw from 'twin.macro';
+import { Link } from 'gatsby';
 
 import { ColorOptions } from '../../../../@types/types';
 
-export const MainContent = styled.div`
+export const MainContent = styled(Link, {
+  shouldForwardProp: (prop) => prop !== 'highlightColor',
+})`
+  &:hover {
+    ${(props: { highlightColor: ColorOptions }) => {
+      switch (props.highlightColor) {
+        case 'green':
+          return tw`bg-lima-500`;
+        case 'gold':
+          return tw`bg-copper-500`;
+        case 'purple':
+          return tw`bg-purple-heart-500`;
+        default:
+          return tw`bg-lochmara-500`;
+      }
+    }}
+  }
+
   @media only screen and (min-width: 1024px) {
     width: 24%;
   }
