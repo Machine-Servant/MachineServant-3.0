@@ -7,7 +7,7 @@ import {
   faCog,
   faClipboardCheck,
 } from '@fortawesome/free-solid-svg-icons';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -117,15 +117,24 @@ export const HomePage: React.FC = () => {
       darken
       content={
         <div className="container px-4 mx-auto xl:px-0">
-          <span className="block text-lg">At {title} we</span>
-          <span className="block text-3xl font-bold uppercase">
-            Design + Build + Manage
-          </span>
-          <span className="block text-lg">
-            websites, web applications, software, and more.
-          </span>
+          <div className="inline-block p-8 text-white rounded-lg rounded-tl-none rounded-br-none shadow-2xl bg-lochmara-500 bg-opacity-80">
+            <span className="block text-lg font-medium">At {title} we</span>
+            <span className="block text-3xl font-bold uppercase">
+              Design + Build + Manage
+            </span>
+            <span className="block text-lg font-medium">
+              websites, web applications, software, and more.
+            </span>
+            <div className="mt-8 text-center">
+              <Link
+                to="/services"
+                className="px-4 py-2 text-xl font-medium text-white underline"
+              >
+                Check out our services!
+              </Link>
+            </div>
+          </div>
           <div className="hidden sm:block">
-            <br />
             <br />
             <br />
             <br />
@@ -163,12 +172,19 @@ export const HomePage: React.FC = () => {
               Your professional source for online innovation.
             </p>
             <p>
-              {title} is a web design and development shop that can take your
-              project from start to finish and produce high quality,
-              professional results!
+              {title} is a web and software development shop that builds
+              solutions for your business. We work with you from the initial
+              stages of idea conception to execution. Your vision becomes our
+              vision and we help you to implement your ideas into working
+              solutions that will take your business to the next level.
             </p>
           </div>
         </div>
+        <p className="mt-4 text-center">
+          <Link className="text-lg underline" to="/contact">
+            Tell us about your project
+          </Link>
+        </p>
       </div>
       <FullSection container>
         <div className="mx-auto max-w-7xl">
@@ -185,21 +201,21 @@ export const HomePage: React.FC = () => {
               alignments and contrast creating the perfect eye flow.
             </ServiceCard>
             <ServiceCard
-              title="Coding"
-              image={coding.childImageSharp.fluid}
-              highlightColor="gold"
-            >
-              Top notch knowledge and expertise on all your coding needs. We're
-              the experts. We know our stuff.
-            </ServiceCard>
-            <ServiceCard
-              title="Web + Software Development"
+              title="Web Application Development"
               image={webApplication.childImageSharp.fluid}
-              highlightColor="purple"
+              highlightColor="gold"
             >
               If you have a great idea for a product, we have top-notch
               solutions! We'll handle the heavy lifting and let you keep coming
               up with amazing ideas.
+            </ServiceCard>
+            <ServiceCard
+              title="Coding"
+              image={coding.childImageSharp.fluid}
+              highlightColor="purple"
+            >
+              Top notch knowledge and expertise on all your coding needs. We're
+              the experts. We know our stuff.
             </ServiceCard>
             <ServiceCard
               title="Project Management"
@@ -228,30 +244,30 @@ export const HomePage: React.FC = () => {
       </div>
       <FullSection container className="">
         <div className="justify-between mx-auto lg:max-w-5xl lg:flex">
-          <FeatureCard title="Free Phone Consultation" icon={faPhone}>
+          <FeatureCard title="Free Consultation" icon={faPhone}>
             No robots here! From consultation to design, building, publishing,
             and maintenance - we only offer one on one human interaction every
             step of the way.
           </FeatureCard>
           <FeatureCard title="Cost Effective" icon={faPiggyBank}>
             After all, we work for small and midsize businesses. Our prices are
-            competitively affordable just for businesses like yours. Schedule a
-            call to discuss our rates.
+            competitive yet affordable. To find out more about our
+            cost-effective rates, scroll down to schedule a free consultation
+            with us.
           </FeatureCard>
           <FeatureCard title="Fast Results" icon={faClock}>
-            Need to start now? We're fast, quick, speedy, and snappy! However
-            you put it, you'll get your website or web application in your
-            timeframe with the best quality results.
+            Need to start now? We're fast, quick, and snappy! However you put
+            it, you'll get your website or web application in your timeframe
+            with the best quality results.
           </FeatureCard>
           <FeatureCard title="In Depth Knowledge" icon={faCog}>
-            Our highly trained team will go the distance in every aspect.
-            Whether you want more traffic, higher sales, or increased awareness
-            - we'll create solutions based on your consumer needs and company
-            goals.
+            With over 15 years of experience in software and website/web
+            application development, we will go the distance in every aspect.
           </FeatureCard>
           <FeatureCard title="Satisfaction Guaranteed" icon={faClipboardCheck}>
             If you want changes, you'll get changes. As many as you need until
-            you're happy with the results.
+            you're happy with the results. We'll create solutions based on your
+            consumer needs and company goals.
           </FeatureCard>
         </div>
       </FullSection>
