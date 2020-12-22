@@ -29,7 +29,7 @@ export const ServicesPage: React.FC = () => {
     query ServicesPageQuery {
       servicesPage: file(relativePath: { eq: "services-page.jpg" }) {
         childImageSharp {
-          fluid(quality: 64) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
