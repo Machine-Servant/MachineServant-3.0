@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCrown, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import Image from 'gatsby-image';
 import { ImageSharpFluidProps } from '../../@types/types';
 import { Link } from 'gatsby';
+import { ByLine } from '../by-line';
 
 type PostProps = {
   frontmatter: {
@@ -39,8 +38,7 @@ export const Post: React.FC<PostProps> = ({
         <div className="flex mb-8">
           <div className="flex flex-col">
             <span className="mb-2 text-xs">
-              <FontAwesomeIcon icon={faUserCircle} /> {author}{' '}
-              <FontAwesomeIcon icon={faCrown} />
+              <ByLine author={author} />
             </span>
             <span className="text-xs">
               {date} &bull; {timeToRead} min
