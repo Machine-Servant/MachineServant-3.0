@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCrown, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import RehypeReact from 'rehype-react';
 import { DiscussionEmbed } from 'disqus-react';
 
@@ -10,6 +8,7 @@ import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
 
 import { components, MainContent } from './styles';
+import { ByLine } from '../by-line';
 
 type BlogPostProps = {
   data: {
@@ -89,9 +88,7 @@ export const BlogPost: React.FC<BlogPostProps> = (props) => {
       />
       <MainContent>
         <div className="flex items-center mb-8 text-sm font-extralight">
-          <FontAwesomeIcon className="mr-2" icon={faUserCircle} />{' '}
-          {post.frontmatter.author}{' '}
-          <FontAwesomeIcon className="mx-2" icon={faCrown} />
+          <ByLine author={post.frontmatter.author} />
           <span className="mx-2">&bull;</span>
           <span className="">{post.frontmatter.date}</span>
           <span className="mx-2">&bull;</span>

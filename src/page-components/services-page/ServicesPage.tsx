@@ -29,7 +29,7 @@ export const ServicesPage: React.FC = () => {
     query ServicesPageQuery {
       servicesPage: file(relativePath: { eq: "services-page.jpg" }) {
         childImageSharp {
-          fluid(quality: 64) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -97,41 +97,16 @@ export const ServicesPage: React.FC = () => {
       </FullSection>
       <FullSection nopt container>
         <ServiceCard
-          title="consulting"
-          image={consulting.childImageSharp.fluid}
-          imageAlt="Two people at a computers with shared paper"
+          title="web application development"
+          image={webApp.childImageSharp.fluid}
+          imageAlt="Two programmers at work at a table"
           orientation="left"
           highlightColor="blue"
         >
-          We provide you and your company with consulting and analysis based on
-          the latest technologies to help you make the best choices to achieve
-          your vision. Our experts will help you improve your brand, increase
-          your audience, and bring your project to life.
-        </ServiceCard>
-        <ServiceCard
-          title="development"
-          image={development.childImageSharp.fluid}
-          imageAlt="Woman looking at her laptop and phone"
-          orientation="right"
-          highlightColor="gold"
-        >
-          Let our team of expert developers build your project. We can take over
-          an existing codebase, or build you something from scratch. We will
-          work with you one on one to bring your dream to reality. Websites and
-          web applications of all scales and levels of complexity are our
-          speciality.
-        </ServiceCard>
-        <ServiceCard
-          title="management + maintenance"
-          image={management.childImageSharp.fluid}
-          imageAlt="People with coffee at a meeting"
-          orientation="left"
-          highlightColor="green"
-        >
-          We have a strong commitment to Project Management. We’re always
-          working to ensure our clients’ needs get the attention they deserve.
-          With our Maintenance services and experience, we keep your project up
-          to date and looking great!
+          Got an idea for the next big thing? We can get there! All of our
+          services come together to bring you the most experienced team
+          dedicated to turning your big idea into the best product on the
+          market.
         </ServiceCard>
         <ServiceCard
           title="design"
@@ -146,16 +121,39 @@ export const ServicesPage: React.FC = () => {
           successfully promoting you and your business.
         </ServiceCard>
         <ServiceCard
-          title="web application development"
-          image={webApp.childImageSharp.fluid}
-          imageAlt="Two programmers at work at a table"
+          title="website development"
+          image={development.childImageSharp.fluid}
+          imageAlt="Woman looking at her laptop and phone"
+          orientation="left"
+          highlightColor="gold"
+        >
+          Let our team of expert developers build your project. We can take over
+          an existing codebase, or build you something from scratch. We will
+          work with you one on one to bring your dream to reality.
+        </ServiceCard>
+        <ServiceCard
+          title="management + maintenance"
+          image={management.childImageSharp.fluid}
+          imageAlt="People with coffee at a meeting"
+          orientation="right"
+          highlightColor="green"
+        >
+          We have a strong commitment to Project Management. We’re always
+          working to ensure our clients’ needs get the attention they deserve.
+          With our Maintenance services and experience, we keep your project up
+          to date and looking great!
+        </ServiceCard>
+        <ServiceCard
+          title="consulting"
+          image={consulting.childImageSharp.fluid}
+          imageAlt="Two people at a computers with shared paper"
           orientation="left"
           highlightColor="blue"
         >
-          Got an idea for the next big thing? We can get there! All of our
-          services come together to bring you the most experienced team
-          dedicated to turning your big idea into the best product on the
-          market.
+          We provide you and your company with consulting and analysis based on
+          the latest technologies to help you make the best choices to achieve
+          your vision. Our experts will help you improve your brand, increase
+          your audience, and bring your project to life.
         </ServiceCard>
         <div className="text-sm text-center">
           <p className="mb-8">

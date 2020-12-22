@@ -48,7 +48,7 @@ export const HomePage: React.FC = () => {
     query HomePageQuery {
       headerImage: file(relativePath: { eq: "home-page-header.jpg" }) {
         childImageSharp {
-          fluid(quality: 64) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
