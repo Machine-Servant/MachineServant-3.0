@@ -2,7 +2,7 @@
   "name": "machineservant-3.0",
   "private": false,
   "description": "MachineServant business home page",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "react": "17.0.1",
@@ -10,7 +10,7 @@
     "react-helmet": "6.1.0"
   },
   "devDependencies": {
-    "@emotion/react": "11.1.3",
+    "@emotion/react": "11.1.4",
     "@emotion/styled": "11.0.0",
     "@fortawesome/fontawesome-svg-core": "1.2.32",
     "@fortawesome/free-brands-svg-icons": "5.15.1",
