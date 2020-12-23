@@ -42,7 +42,11 @@ export const useAvatar = (): AvatarProps => {
     }
   `);
 
+  if (!evan) {
+    throw Error('GraphQL query returned empty results');
+  }
+
   return {
-    [AvatarNames.EVAN_STERN]: evan!.childImageSharp!,
+    [AvatarNames.EVAN_STERN]: evan.childImageSharp!,
   };
 };

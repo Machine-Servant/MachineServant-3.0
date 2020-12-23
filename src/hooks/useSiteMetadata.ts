@@ -48,5 +48,9 @@ export const useSiteMetadata = (): SiteMetadataProps => {
     }
   `);
 
-  return site!.siteMetadata!;
+  if (!site?.siteMetadata) {
+    throw Error('GraphQL query returned empty results');
+  }
+
+  return site.siteMetadata!;
 };
