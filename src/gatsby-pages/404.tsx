@@ -19,6 +19,10 @@ const Error404Page: React.FC = () => {
     }
   `);
 
+  if (!errorImage?.childImageSharp?.fluid) {
+    throw Error('GraphQL query returned empty results');
+  }
+
   return (
     <Layout
       image={errorImage.childImageSharp.fluid}
