@@ -48,15 +48,13 @@ type BlogListPageProps = {
   };
 };
 
-type BlogListPageQueryProps = {
-  blogImage: ImageSharpFluidProps;
-};
-
 export const BlogListPage: React.FC<BlogListPageProps> = ({
   data,
   pageContext,
 }) => {
-  const { blogImage } = useStaticQuery<BlogListPageQueryProps>(graphql`
+  const {
+    blogImage,
+  } = useStaticQuery<GatsbyTypes.BlogPageListPageQueryQuery>(graphql`
     query BlogPageListPageQuery {
       blogImage: file(relativePath: { eq: "blog.jpg" }) {
         childImageSharp {
@@ -67,6 +65,10 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({
       }
     }
   `);
+
+  if (!blogImage?.childImageSharp?.fluid) {
+    throw Error('GraphQL query returned empty results');
+  }
 
   const { edges: posts } = data.posts;
   const {

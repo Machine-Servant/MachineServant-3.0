@@ -2,23 +2,15 @@ import React from 'react';
 
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
-import { ImageSharpFluidProps, TagsGroupProps } from '../../@types/types';
 import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
 import { Tag } from '../../components/tag';
-
-type TagsPageQueryProps = {
-  allMarkdownRemark: {
-    group: TagsGroupProps[];
-  };
-  blogImage: ImageSharpFluidProps;
-};
 
 export const TagsPage: React.FC = () => {
   const {
     allMarkdownRemark,
     blogImage,
-  } = useStaticQuery<TagsPageQueryProps>(graphql`
+  } = useStaticQuery<GatsbyTypes.TagsPageQueryQuery>(graphql`
     query TagsPageQuery {
       allMarkdownRemark(filter: { frontmatter: { published: { eq: true } } }) {
         group(field: frontmatter___tags) {
@@ -36,8 +28,12 @@ export const TagsPage: React.FC = () => {
     }
   `);
 
+  if (!blogImage?.childImageSharp?.fluid) {
+    throw Error('GraphQL query returned empty results');
+  }
+
   const sortedTags = [...allMarkdownRemark.group].sort(
-    (a: TagsGroupProps, b: TagsGroupProps) => b.totalCount - a.totalCount
+    (a, b) => b.totalCount - a.totalCount
   );
 
   return (
@@ -56,7 +52,7 @@ export const TagsPage: React.FC = () => {
       </div>
       <div className="container flex flex-wrap items-center max-w-5xl pb-12 mx-auto justify-evenly lg:justify-between">
         {sortedTags.map((tag) => (
-          <Tag value={tag.fieldValue} count={tag.totalCount} />
+          <Tag value={tag.fieldValue!} count={tag.totalCount} />
         ))}
       </div>
     </Layout>

@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
               height={35}
               width={35}
               src="../../../static/images/logo-small.png"
-              alt={title}
+              alt={title || 'MachineServant'}
               transformOptions={{}}
               blurredOptions={{}}
             />
@@ -53,33 +53,41 @@ export const Footer: React.FC = () => {
         </div>
         <div className="text-center sm:text-left">
           <div className="mb-4 text-3xl">
-            <a href={social.linkedIn} rel="noreferrer" target="_blank">
-              <FontAwesomeIcon
-                className="mr-6"
-                icon={faLinkedinIn}
-                title="LinkedIn"
-              />
-            </a>
-            <a href={social.facebook} rel="noreferrer" target="_blank">
-              <FontAwesomeIcon
-                className="mr-6"
-                icon={faFacebookF}
-                title="Facebook"
-              />
-            </a>
-            <a href={social.instagram} rel="noreferrer" target="_blank">
-              <FontAwesomeIcon
-                className="mr-6"
-                icon={faInstagramSquare}
-                title="Instagram"
-              />
-            </a>
+            {social?.linkedIn && (
+              <a href={social.linkedIn} rel="noreferrer" target="_blank">
+                <FontAwesomeIcon
+                  className="mr-6"
+                  icon={faLinkedinIn}
+                  title="LinkedIn"
+                />
+              </a>
+            )}
+            {social?.facebook && (
+              <a href={social.facebook} rel="noreferrer" target="_blank">
+                <FontAwesomeIcon
+                  className="mr-6"
+                  icon={faFacebookF}
+                  title="Facebook"
+                />
+              </a>
+            )}
+            {social?.instagram && (
+              <a href={social.instagram} rel="noreferrer" target="_blank">
+                <FontAwesomeIcon
+                  className="mr-6"
+                  icon={faInstagramSquare}
+                  title="Instagram"
+                />
+              </a>
+            )}
           </div>
-          <span className="block mb-4">
-            <GithubButton href={social.github}>
-              Follow me @machine-servant
-            </GithubButton>
-          </span>
+          {social?.github && (
+            <span className="block mb-4">
+              <GithubButton href={social.github}>
+                Follow me @machine-servant
+              </GithubButton>
+            </span>
+          )}
           <span className="block">
             ©{new Date().getFullYear()} by {title}.
           </span>

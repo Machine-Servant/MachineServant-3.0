@@ -3,7 +3,6 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { ImageSharpFluidProps } from '../../@types/types';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { Layout } from '../../components/layout';
 import { ContactForm } from '../../components/contact-form';
@@ -11,12 +10,10 @@ import { FullSection } from '../../styles';
 import { SEO } from '../../components/seo';
 import { CalendlyEmbed } from '../../components/calendly-embed';
 
-type ContactPageQueryProps = {
-  contactImage: ImageSharpFluidProps;
-};
-
 export const ContactPage: React.FC = () => {
-  const { contactImage } = useStaticQuery<ContactPageQueryProps>(graphql`
+  const {
+    contactImage,
+  } = useStaticQuery<GatsbyTypes.ContactPageQueryQuery>(graphql`
     query ContactPageQuery {
       contactImage: file(relativePath: { eq: "contact.jpg" }) {
         childImageSharp {
@@ -29,6 +26,10 @@ export const ContactPage: React.FC = () => {
   `);
 
   const { title, contact } = useSiteMetadata();
+
+  if (!contactImage?.childImageSharp?.fluid) {
+    throw Error('GraphQL query returned empty results');
+  }
 
   return (
     <Layout
@@ -55,7 +56,7 @@ export const ContactPage: React.FC = () => {
                 height={60}
                 width={60}
                 src="../../../static/images/logo-small.png"
-                alt={title}
+                alt={title || 'MachineServant'}
                 transformOptions={{}}
                 blurredOptions={{}}
               />

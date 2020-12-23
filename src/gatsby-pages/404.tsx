@@ -2,16 +2,13 @@ import React from 'react';
 
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
-import { ImageSharpFluidProps } from '../@types/types';
 import { Layout } from '../components/layout';
 
-type Error404PageQueryProps = {
-  errorImage: ImageSharpFluidProps;
-};
-
 const Error404Page: React.FC = () => {
-  const { errorImage } = useStaticQuery<Error404PageQueryProps>(graphql`
-    query Error404PageQuery {
+  const {
+    errorImage,
+  } = useStaticQuery<GatsbyTypes.ErrorPageQueryQuery>(graphql`
+    query ErrorPageQuery {
       errorImage: file(relativePath: { eq: "404.jpg" }) {
         childImageSharp {
           fluid(quality: 64) {

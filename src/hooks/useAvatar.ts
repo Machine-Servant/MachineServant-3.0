@@ -1,5 +1,9 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import { FixedObject, FluidObject } from 'gatsby-image';
+
+import {
+  GatsbyImageSharpFluidProps,
+  GatsbyImageSharpFixedProps,
+} from '../@types/types';
 
 type AvatarProps = {
   [name: string]: AvatarSizes;
@@ -10,22 +14,14 @@ export enum AvatarNames {
 }
 
 type AvatarSizes = {
-  fluid: FluidObject;
-  sm: FixedObject;
-  md: FixedObject;
-  lg: FixedObject;
-};
-
-type AvatarImageSharpProps = {
-  childImageSharp: AvatarSizes;
-};
-
-type AvatarQueryProps = {
-  evan: AvatarImageSharpProps;
+  fluid: GatsbyImageSharpFluidProps;
+  sm: GatsbyImageSharpFixedProps;
+  md: GatsbyImageSharpFixedProps;
+  lg: GatsbyImageSharpFixedProps;
 };
 
 export const useAvatar = (): AvatarProps => {
-  const { evan } = useStaticQuery<AvatarQueryProps>(graphql`
+  const { evan } = useStaticQuery<GatsbyTypes.AvatarQueryQuery>(graphql`
     query AvatarQuery {
       evan: file(relativePath: { eq: "evan-avatar.png" }) {
         childImageSharp {
@@ -47,6 +43,6 @@ export const useAvatar = (): AvatarProps => {
   `);
 
   return {
-    [AvatarNames.EVAN_STERN]: evan.childImageSharp,
+    [AvatarNames.EVAN_STERN]: evan!.childImageSharp!,
   };
 };

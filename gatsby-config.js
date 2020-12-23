@@ -149,6 +149,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
+    {
+      resolve: 'gatsby-plugin-typegen',
+      options: {
+        emitSchema: {
+          'src/__generated__/gatsby-introspection.json': true,
+        },
+        emitPluginDocuments: {
+          'src/__generated__/gatsby-plugin-documents.graphql': true,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

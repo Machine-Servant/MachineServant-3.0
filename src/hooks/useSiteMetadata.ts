@@ -1,33 +1,28 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
 type SiteMetadataProps = {
-  title: string;
-  description: string;
-  author: string;
-  siteUrl: string;
-  image: string;
-  contact: string;
-  keywords: string[];
-  social: {
-    facebook: string;
-    linkedIn: string;
-    instagram: string;
-    github: string;
+  title?: string;
+  description?: string;
+  author?: string;
+  siteUrl?: string;
+  image?: string;
+  contact?: string;
+  keywords: GatsbyTypes.Maybe<readonly (string | undefined)[]>;
+  social?: {
+    facebook?: string;
+    linkedIn?: string;
+    instagram?: string;
+    github?: string;
   };
-  navigation: {
-    name: string;
-    path: string;
-  }[];
-};
-
-type SiteMetadataQueryProps = {
-  site: {
-    siteMetadata: SiteMetadataProps;
-  };
+  navigation: GatsbyTypes.Maybe<
+    readonly GatsbyTypes.Maybe<
+      Pick<GatsbyTypes.SiteSiteMetadataNavigation, 'name' | 'path'>
+    >[]
+  >;
 };
 
 export const useSiteMetadata = (): SiteMetadataProps => {
-  const { site } = useStaticQuery<SiteMetadataQueryProps>(graphql`
+  const { site } = useStaticQuery<GatsbyTypes.SiteMetaDataQueryQuery>(graphql`
     query SiteMetaDataQuery {
       site {
         siteMetadata {
@@ -53,5 +48,5 @@ export const useSiteMetadata = (): SiteMetadataProps => {
     }
   `);
 
-  return site.siteMetadata;
+  return site!.siteMetadata!;
 };
