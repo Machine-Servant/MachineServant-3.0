@@ -1991,6 +1991,8 @@ type Query_allDirectoryArgs = {
 type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
+  port: Maybe<IntQueryOperatorInput>;
+  host: Maybe<StringQueryOperatorInput>;
   flags: Maybe<SiteFlagsFilterInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
@@ -2130,6 +2132,8 @@ type Query_allSitePluginArgs = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
+  readonly port: Maybe<Scalars['Int']>;
+  readonly host: Maybe<Scalars['String']>;
   readonly flags: Maybe<SiteFlags>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
@@ -2345,6 +2349,8 @@ enum SiteFieldsEnum {
   siteMetadata___navigation = 'siteMetadata.navigation',
   siteMetadata___navigation___name = 'siteMetadata.navigation.name',
   siteMetadata___navigation___path = 'siteMetadata.navigation.path',
+  port = 'port',
+  host = 'host',
   flags___FAST_DEV = 'flags.FAST_DEV',
   flags___FAST_REFRESH = 'flags.FAST_REFRESH',
   polyfill = 'polyfill',
@@ -2440,6 +2446,8 @@ enum SiteFieldsEnum {
 type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
+  readonly port: Maybe<IntQueryOperatorInput>;
+  readonly host: Maybe<StringQueryOperatorInput>;
   readonly flags: Maybe<SiteFlagsFilterInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
@@ -3448,44 +3456,34 @@ type WebPOptions = {
   readonly quality: Maybe<Scalars['Int']>;
 };
 
-type Unnamed_1_QueryVariables = Exact<{
-  id: Maybe<Scalars['String']>;
-}>;
-
-
-type Unnamed_1_Query = { readonly markdownRemark: Maybe<(
-    Pick<MarkdownRemark, 'id' | 'htmlAst' | 'excerpt' | 'timeToRead'>
-    & { readonly parent: Maybe<Pick<File, 'id' | 'relativeDirectory'>>, readonly frontmatter: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'author' | 'date' | 'keywords' | 'title' | 'tags'>
-      & { fromNow: MarkdownRemarkFrontmatter['date'] }
-      & { readonly featuredImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly socialImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly resize: Maybe<Pick<ImageSharpResize, 'src' | 'width' | 'height'>> }> }> }
-    )> }
-  )> };
-
 type BlogPageListPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type BlogPageListPageQueryQuery = { readonly blogImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
 
-type AvatarQueryQueryVariables = Exact<{ [key: string]: never; }>;
+type GatsbyImageSharpFluid_withWebpFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type ErrorPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type AvatarQueryQuery = { readonly evan: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment>, readonly sm: Maybe<GatsbyImageSharpFixed_withWebpFragment>, readonly md: Maybe<GatsbyImageSharpFixed_withWebpFragment>, readonly lg: Maybe<GatsbyImageSharpFixed_withWebpFragment> }> }> };
+type ErrorPageQuery = { readonly errorImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
 
-type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type Unnamed_2_Query = { readonly errorImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
-
-type ServicesPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+type usersevansternprojectsmachineservantmachineservant30SrcgatsbyPagesblogMarkdownRemarkParentFileRelativeDirectoryTsx3899789536QueryVariables = Exact<{
+  id: Maybe<Scalars['String']>;
+}>;
 
 
-type ServicesPageQueryQuery = { readonly servicesPage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly consulting: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly development: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly management: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly design: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly webApp: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
-
-type FormSuccessPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type FormSuccessPageQueryQuery = { readonly formSuccess: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
+type usersevansternprojectsmachineservantmachineservant30SrcgatsbyPagesblogMarkdownRemarkParentFileRelativeDirectoryTsx3899789536Query = { readonly markdownRemark: Maybe<(
+    Pick<MarkdownRemark, 'id' | 'htmlAst' | 'excerpt' | 'timeToRead'>
+    & { readonly parent: Maybe<(
+      { readonly __typename: 'File' }
+      & Pick<File, 'id' | 'relativeDirectory'>
+    ) | { readonly __typename: 'ImageSharp' } | { readonly __typename: 'MarkdownRemark' } | { readonly __typename: 'Directory' } | { readonly __typename: 'Site' } | { readonly __typename: 'SitePage' } | { readonly __typename: 'SitePlugin' } | { readonly __typename: 'SiteBuildMetadata' }>, readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'author' | 'date' | 'keywords' | 'title' | 'tags'>
+      & { fromNow: MarkdownRemarkFrontmatter['date'] }
+      & { readonly featuredImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly socialImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly resize: Maybe<Pick<ImageSharpResize, 'src' | 'width' | 'height'>> }> }> }
+    )> }
+  )> };
 
 type SiteMetaDataQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3495,10 +3493,25 @@ type SiteMetaDataQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Ma
       & { readonly social: Maybe<Pick<SiteSiteMetadataSocial, 'facebook' | 'linkedIn' | 'instagram' | 'github'>>, readonly navigation: Maybe<ReadonlyArray<Maybe<Pick<SiteSiteMetadataNavigation, 'name' | 'path'>>>> }
     )> }> };
 
+type FormSuccessPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type FormSuccessPageQueryQuery = { readonly formSuccess: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
+
+type AvatarQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AvatarQueryQuery = { readonly evan: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment>, readonly sm: Maybe<GatsbyImageSharpFixed_withWebpFragment>, readonly md: Maybe<GatsbyImageSharpFixed_withWebpFragment>, readonly lg: Maybe<GatsbyImageSharpFixed_withWebpFragment> }> }> };
+
 type TagsPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type TagsPageQueryQuery = { readonly allMarkdownRemark: { readonly group: ReadonlyArray<Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>> }, readonly blogImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
+
+type ServicesPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type ServicesPageQueryQuery = { readonly servicesPage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly consulting: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly development: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly management: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly design: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly webApp: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
 
 type BlogQueryQueryVariables = Exact<{
   skip: Scalars['Int'];
@@ -3508,27 +3521,14 @@ type BlogQueryQueryVariables = Exact<{
 
 type BlogQueryQuery = { readonly posts: { readonly edges: ReadonlyArray<{ readonly node: (
         Pick<MarkdownRemark, 'id' | 'excerpt' | 'timeToRead'>
-        & { readonly parent: Maybe<Pick<File, 'id' | 'relativeDirectory'>>, readonly frontmatter: Maybe<(
+        & { readonly parent: Maybe<(
+          { readonly __typename: 'File' }
+          & Pick<File, 'id' | 'relativeDirectory'>
+        ) | { readonly __typename: 'ImageSharp' } | { readonly __typename: 'MarkdownRemark' } | { readonly __typename: 'Directory' } | { readonly __typename: 'Site' } | { readonly __typename: 'SitePage' } | { readonly __typename: 'SitePlugin' } | { readonly __typename: 'SiteBuildMetadata' }>, readonly frontmatter: Maybe<(
           Pick<MarkdownRemarkFrontmatter, 'author' | 'date' | 'title' | 'tags'>
           & { readonly featuredImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> }
         )> }
       ) }> }, readonly tagsGroup: { readonly group: ReadonlyArray<Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>> } };
-
-type Unnamed_3_QueryVariables = Exact<{
-  tag: Maybe<Scalars['String']>;
-}>;
-
-
-type Unnamed_3_Query = { readonly posts: (
-    Pick<MarkdownRemarkConnection, 'totalCount'>
-    & { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<MarkdownRemark, 'id' | 'excerpt' | 'timeToRead'>
-        & { readonly parent: Maybe<Pick<File, 'id' | 'relativeDirectory'>>, readonly frontmatter: Maybe<(
-          Pick<MarkdownRemarkFrontmatter, 'author' | 'date' | 'title' | 'tags'>
-          & { readonly featuredImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> }
-        )> }
-      ) }> }
-  ) };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -3547,8 +3547,6 @@ type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRat
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { maxHeight: ImageSharpFluid['presentationHeight'], maxWidth: ImageSharpFluid['presentationWidth'] };
 
 type GatsbyImageSharpFluid_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
-
-type GatsbyImageSharpFluid_withWebpFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
@@ -3580,14 +3578,38 @@ type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio
 
 type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-type HomePageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+type usersevansternprojectsmachineservantmachineservant30SrctemplatesTaggedPostsTsx4240163052QueryVariables = Exact<{
+  tag: Maybe<Scalars['String']>;
+}>;
 
 
-type HomePageQueryQuery = { readonly headerImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly features: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly websiteDesign: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly coding: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly webApplication: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly projectManagement: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly engeloRumoraProfile: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly contactUs: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
+type usersevansternprojectsmachineservantmachineservant30SrctemplatesTaggedPostsTsx4240163052Query = { readonly posts: (
+    Pick<MarkdownRemarkConnection, 'totalCount'>
+    & { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<MarkdownRemark, 'id' | 'excerpt' | 'timeToRead'>
+        & { readonly parent: Maybe<(
+          { readonly __typename: 'File' }
+          & Pick<File, 'id' | 'relativeDirectory'>
+        ) | { readonly __typename: 'ImageSharp' } | { readonly __typename: 'MarkdownRemark' } | { readonly __typename: 'Directory' } | { readonly __typename: 'Site' } | { readonly __typename: 'SitePage' } | { readonly __typename: 'SitePlugin' } | { readonly __typename: 'SiteBuildMetadata' }>, readonly frontmatter: Maybe<(
+          Pick<MarkdownRemarkFrontmatter, 'author' | 'date' | 'title' | 'tags'>
+          & { readonly featuredImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> }
+        )> }
+      ) }> }
+  ) };
+
+type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 type ContactPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type ContactPageQueryQuery = { readonly contactImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
+
+type HomePageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type HomePageQueryQuery = { readonly headerImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly features: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly websiteDesign: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly coding: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly webApplication: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly projectManagement: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly engeloRumoraProfile: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }>, readonly contactUs: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_withWebpFragment> }> }> };
 
 }
