@@ -158,6 +158,7 @@ module.exports = {
         emitPluginDocuments: {
           'src/__generated__/gatsby-plugin-documents.graphql': true,
         },
+        outputPath: `src/__generated__/gatsby-types.d.ts`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

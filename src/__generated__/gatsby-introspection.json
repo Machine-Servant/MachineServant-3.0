@@ -946,6 +946,26 @@
                 "defaultValue": null
               },
               {
+                "name": "port",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "IntQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "host",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "flags",
                 "description": "",
                 "type": {
@@ -13917,6 +13937,30 @@
             "deprecationReason": null
           },
           {
+            "name": "port",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "host",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "flags",
             "description": null,
             "args": [],
@@ -14315,6 +14359,26 @@
             "defaultValue": null
           },
           {
+            "name": "port",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "host",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "flags",
             "description": "",
             "type": {
@@ -14522,6 +14586,18 @@
           },
           {
             "name": "siteMetadata___navigation___path",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "port",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "host",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -16243,6 +16319,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "SitePluginPluginOptionsEmitPluginDocumentsFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outputPath",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -18168,6 +18254,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "SitePluginPluginOptionsEmitPluginDocuments",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outputPath",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -20302,6 +20400,12 @@
           },
           {
             "name": "pluginCreator___pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginCreator___pluginOptions___outputPath",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -25658,6 +25762,12 @@
             "deprecationReason": null
           },
           {
+            "name": "pluginOptions___outputPath",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pluginOptions___pathCheck",
             "description": null,
             "isDeprecated": false,
@@ -26940,7 +27050,11 @@
       {
         "name": "skip",
         "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
         "args": [
           {
             "name": "if",
@@ -26961,7 +27075,11 @@
       {
         "name": "include",
         "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
         "args": [
           {
             "name": "if",
@@ -26982,7 +27100,10 @@
       {
         "name": "deprecated",
         "description": "Marks an element of a GraphQL schema as no longer supported.",
-        "locations": ["FIELD_DEFINITION", "ENUM_VALUE"],
+        "locations": [
+          "FIELD_DEFINITION",
+          "ENUM_VALUE"
+        ],
         "args": [
           {
             "name": "reason",
@@ -26999,7 +27120,9 @@
       {
         "name": "default",
         "description": "Provides default value for input field.",
-        "locations": ["INPUT_FIELD_DEFINITION"],
+        "locations": [
+          "INPUT_FIELD_DEFINITION"
+        ],
         "args": [
           {
             "name": "value",
@@ -27020,7 +27143,9 @@
       {
         "name": "dateformat",
         "description": "Add date formatting options.",
-        "locations": ["FIELD_DEFINITION"],
+        "locations": [
+          "FIELD_DEFINITION"
+        ],
         "args": [
           {
             "name": "formatString",
@@ -27067,7 +27192,9 @@
       {
         "name": "link",
         "description": "Link to node by foreign-key relation.",
-        "locations": ["FIELD_DEFINITION"],
+        "locations": [
+          "FIELD_DEFINITION"
+        ],
         "args": [
           {
             "name": "by",
@@ -27108,7 +27235,9 @@
       {
         "name": "fileByRelativePath",
         "description": "Link to File node by relative path.",
-        "locations": ["FIELD_DEFINITION"],
+        "locations": [
+          "FIELD_DEFINITION"
+        ],
         "args": [
           {
             "name": "from",
@@ -27125,7 +27254,9 @@
       {
         "name": "proxy",
         "description": "Proxy resolver from another field.",
-        "locations": ["FIELD_DEFINITION"],
+        "locations": [
+          "FIELD_DEFINITION"
+        ],
         "args": [
           {
             "name": "from",
@@ -27160,7 +27291,9 @@
       {
         "name": "infer",
         "description": "Infer field types from field values.",
-        "locations": ["OBJECT"],
+        "locations": [
+          "OBJECT"
+        ],
         "args": [
           {
             "name": "noDefaultResolvers",
@@ -27177,7 +27310,9 @@
       {
         "name": "dontInfer",
         "description": "Do not infer field types from field values.",
-        "locations": ["OBJECT"],
+        "locations": [
+          "OBJECT"
+        ],
         "args": [
           {
             "name": "noDefaultResolvers",
@@ -27194,7 +27329,9 @@
       {
         "name": "mimeTypes",
         "description": "Define the mime-types handled by this type.",
-        "locations": ["OBJECT"],
+        "locations": [
+          "OBJECT"
+        ],
         "args": [
           {
             "name": "types",
@@ -27223,7 +27360,9 @@
       {
         "name": "childOf",
         "description": "Define parent-child relations between types. This is used to add `child*` or `children*` convenience fields like `childImageSharp`.",
-        "locations": ["OBJECT"],
+        "locations": [
+          "OBJECT"
+        ],
         "args": [
           {
             "name": "mimeTypes",
@@ -27288,7 +27427,9 @@
       {
         "name": "nodeInterface",
         "description": "Adds root query fields for an interface. All implementing types must also implement the Node interface.",
-        "locations": ["INTERFACE"],
+        "locations": [
+          "INTERFACE"
+        ],
         "args": []
       }
     ]
