@@ -2,20 +2,11 @@ import React from 'react';
 
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
-import { Layout } from '../../components/layout';
-import { ImageSharpFluidProps } from '../../@types/types';
 import { FullSection } from '../../styles';
-import { ServiceCard } from './components/service-card';
+import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
 
-type ServicesPageProps = {
-  servicesPage: ImageSharpFluidProps;
-  consulting: ImageSharpFluidProps;
-  development: ImageSharpFluidProps;
-  management: ImageSharpFluidProps;
-  design: ImageSharpFluidProps;
-  webApp: ImageSharpFluidProps;
-};
+import { ServiceCard } from './components/service-card';
 
 export const ServicesPage: React.FC = () => {
   const {
@@ -25,7 +16,7 @@ export const ServicesPage: React.FC = () => {
     management,
     design,
     webApp,
-  } = useStaticQuery<ServicesPageProps>(graphql`
+  } = useStaticQuery<GatsbyTypes.ServicesPageQueryQuery>(graphql`
     query ServicesPageQuery {
       servicesPage: file(relativePath: { eq: "services-page.jpg" }) {
         childImageSharp {
@@ -71,6 +62,17 @@ export const ServicesPage: React.FC = () => {
       }
     }
   `);
+
+  if (
+    !servicesPage?.childImageSharp?.fluid ||
+    !consulting?.childImageSharp?.fluid ||
+    !development?.childImageSharp?.fluid ||
+    !management?.childImageSharp?.fluid ||
+    !design?.childImageSharp?.fluid ||
+    !webApp?.childImageSharp?.fluid
+  ) {
+    throw Error('GraphQL query returned empty results');
+  }
 
   return (
     <Layout

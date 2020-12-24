@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
             src="../../../static/images/logo-small.png"
             height={35}
             width={35}
-            alt={title}
+            alt={title || 'MachineServant'}
             blurredOptions={{}}
             transformOptions={{}}
           />
@@ -36,45 +36,55 @@ export const Header: React.FC = () => {
         </AniLink>
         <nav className="flex items-center justify-between w-full text-sm sm:w-auto">
           <ul className="flex justify-between px-2 sm:px-0">
-            {navigation.map((nav) => (
-              <li key={nav.name} className="px-2 sm:px-4">
-                <AniLink fade to={nav.path} title={nav.name}>
-                  {nav.name}
-                </AniLink>
-              </li>
-            ))}
+            {navigation &&
+              navigation.map(
+                (nav) =>
+                  nav && (
+                    <li key={nav.name} className="px-2 sm:px-4">
+                      <AniLink fade to={nav.path} title={nav.name}>
+                        {nav.name}
+                      </AniLink>
+                    </li>
+                  )
+              )}
           </ul>
           <ul className="flex justify-between pr-2 sm:pl-6">
-            <li className="px-2">
-              <a
-                href={social.linkedIn}
-                target="_blank"
-                rel="noreferrer noopener"
-                title="linkedIn"
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </a>
-            </li>
-            <li className="px-2">
-              <a
-                href={social.facebook}
-                target="_blank"
-                rel="noreferrer noopener"
-                title="Facebook"
-              >
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-            </li>
-            <li className="px-2">
-              <a
-                href={social.instagram}
-                target="_blank"
-                rel="noreferrer noopener"
-                title="instagram"
-              >
-                <FontAwesomeIcon icon={faInstagramSquare} />
-              </a>
-            </li>
+            {social?.linkedIn && (
+              <li className="px-2">
+                <a
+                  href={social.linkedIn}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  title="linkedIn"
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                </a>
+              </li>
+            )}
+            {social?.facebook && (
+              <li className="px-2">
+                <a
+                  href={social.facebook}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  title="Facebook"
+                >
+                  <FontAwesomeIcon icon={faFacebookF} />
+                </a>
+              </li>
+            )}
+            {social?.instagram && (
+              <li className="px-2">
+                <a
+                  href={social.instagram}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  title="instagram"
+                >
+                  <FontAwesomeIcon icon={faInstagramSquare} />
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
       </div>

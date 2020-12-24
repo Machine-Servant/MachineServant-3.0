@@ -2,15 +2,12 @@ import React from 'react';
 
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
-import { ImageSharpFluidProps } from '../../@types/types';
 import { Layout } from '../../components/layout';
 
-type FormSuccessPageQueryProps = {
-  formSuccess: ImageSharpFluidProps;
-};
-
 export const FormSuccessPage: React.FC = () => {
-  const { formSuccess } = useStaticQuery<FormSuccessPageQueryProps>(graphql`
+  const {
+    formSuccess,
+  } = useStaticQuery<GatsbyTypes.FormSuccessPageQueryQuery>(graphql`
     query FormSuccessPageQuery {
       formSuccess: file(relativePath: { eq: "contact-success.jpg" }) {
         childImageSharp {
@@ -21,6 +18,10 @@ export const FormSuccessPage: React.FC = () => {
       }
     }
   `);
+
+  if (!formSuccess?.childImageSharp?.fluid) {
+    throw Error('GraphQL query returned empty results');
+  }
 
   return (
     <Layout

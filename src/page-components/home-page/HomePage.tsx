@@ -11,7 +11,6 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { ImageSharpFluidProps } from '../../@types/types';
 import { Layout } from '../../components/layout';
 import { SEO } from '../../components/seo';
 import { ContactForm } from '../../components/contact-form';
@@ -23,17 +22,6 @@ import { FeatureCard } from './components/feature-card';
 import { Testimonial } from './components/testimonial';
 import { SectionHeader } from './styles';
 
-type HomePageQueryProps = {
-  headerImage: ImageSharpFluidProps;
-  websiteDesign: ImageSharpFluidProps;
-  coding: ImageSharpFluidProps;
-  webApplication: ImageSharpFluidProps;
-  projectManagement: ImageSharpFluidProps;
-  features: ImageSharpFluidProps;
-  engeloRumoraProfile: ImageSharpFluidProps;
-  contactUs: ImageSharpFluidProps;
-};
-
 export const HomePage: React.FC = () => {
   const {
     headerImage,
@@ -44,7 +32,7 @@ export const HomePage: React.FC = () => {
     projectManagement,
     engeloRumoraProfile,
     contactUs,
-  } = useStaticQuery<HomePageQueryProps>(graphql`
+  } = useStaticQuery<GatsbyTypes.HomePageQueryQuery>(graphql`
     query HomePageQuery {
       headerImage: file(relativePath: { eq: "home-page-header.jpg" }) {
         childImageSharp {
@@ -109,6 +97,19 @@ export const HomePage: React.FC = () => {
 
   const { title } = useSiteMetadata();
 
+  if (
+    !headerImage?.childImageSharp?.fluid ||
+    !features?.childImageSharp?.fluid ||
+    !websiteDesign?.childImageSharp?.fluid ||
+    !coding?.childImageSharp?.fluid ||
+    !webApplication?.childImageSharp?.fluid ||
+    !projectManagement?.childImageSharp?.fluid ||
+    !engeloRumoraProfile?.childImageSharp?.fluid ||
+    !contactUs?.childImageSharp?.fluid
+  ) {
+    throw Error('GraphQL query returned empty results');
+  }
+
   return (
     <Layout
       image={headerImage.childImageSharp.fluid}
@@ -152,7 +153,7 @@ export const HomePage: React.FC = () => {
               height={70}
               width={70}
               src="../../../static/images/logo-small.png"
-              alt={title}
+              alt={title || 'MachineServant'}
               transformOptions={{}}
               blurredOptions={{}}
             />

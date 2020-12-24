@@ -41,7 +41,8 @@ export const SEO: React.FC<SEOProps> = ({
 
   const url = `${siteUrl}${pathname}`;
 
-  const metaKeywords = keywords && keywords.length ? keywords : siteKeywords;
+  const metaKeywords =
+    keywords && keywords.length ? keywords : siteKeywords || [];
 
   return (
     <Helmet
