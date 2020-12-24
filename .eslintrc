@@ -2,6 +2,7 @@
   "extends": "react-app",
   "globals": {
     "__PATH_PREFIX__": true
-  }
+  },
+  "ignorePatterns": ["**/__generated__/*"]
 }
 

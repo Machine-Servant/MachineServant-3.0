@@ -5,10 +5,8 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import { Layout } from '../components/layout';
 
 const Error404Page: React.FC = () => {
-  const {
-    errorImage,
-  } = useStaticQuery<GatsbyTypes.ErrorPageQueryQuery>(graphql`
-    query ErrorPageQuery {
+  const { errorImage } = useStaticQuery(graphql`
+    query {
       errorImage: file(relativePath: { eq: "404.jpg" }) {
         childImageSharp {
           fluid(quality: 64) {
