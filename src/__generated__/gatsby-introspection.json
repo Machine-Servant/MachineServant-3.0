@@ -16248,6 +16248,16 @@
             "defaultValue": null
           },
           {
+            "name": "outputPath",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "pathCheck",
             "description": "",
             "type": {
@@ -18168,6 +18178,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "SitePluginPluginOptionsEmitPluginDocuments",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outputPath",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -20302,6 +20324,12 @@
           },
           {
             "name": "pluginCreator___pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginCreator___pluginOptions___outputPath",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -25653,6 +25681,12 @@
           },
           {
             "name": "pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginOptions___outputPath",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
