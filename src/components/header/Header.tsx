@@ -24,6 +24,7 @@ export const Header: React.FC = () => {
         >
           <StaticImage
             src="../../../static/images/logo-small.png"
+            layout="fixed"
             height={35}
             width={35}
             alt={title || 'MachineServant'}

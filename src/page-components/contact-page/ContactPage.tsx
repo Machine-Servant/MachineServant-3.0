@@ -53,6 +53,7 @@ export const ContactPage: React.FC = () => {
             <div className="flex items-center justify-center mb-8">
               <StaticImage
                 className="inline-block"
+                layout="fixed"
                 height={60}
                 width={60}
                 src="../../../static/images/logo-small.png"

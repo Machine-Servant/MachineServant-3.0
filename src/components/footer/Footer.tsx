@@ -21,6 +21,7 @@ export const Footer: React.FC = () => {
           <div className="flex items-center justify-center mb-4">
             <StaticImage
               className="inline-block"
+              layout="fixed"
               height={35}
               width={35}
               src="../../../static/images/logo-small.png"
