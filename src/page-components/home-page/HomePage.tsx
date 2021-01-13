@@ -150,6 +150,7 @@ export const HomePage: React.FC = () => {
           <div className="hidden lg:inline-block">
             <StaticImage
               className="inline-block"
+              layout="fixed"
               height={70}
               width={70}
               src="../../../static/images/logo-small.png"
