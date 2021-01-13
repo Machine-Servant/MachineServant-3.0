@@ -9,5 +9,7 @@ jobs:
         run: npm install
       - name: Run ESLint
         run: npm run lint
+      - name: Build (generates typescript types for GraphQL)
+        run: npm run build
       - name: Run TypeScript Type Check
         run: npm run type-check
