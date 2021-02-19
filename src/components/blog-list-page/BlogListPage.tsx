@@ -20,7 +20,7 @@ type PostProps = {
     date: string;
     featuredImage: ImageSharpFluidProps;
     title: string;
-    tags: string;
+    tags: string[];
   };
   timeToRead: number;
 };
