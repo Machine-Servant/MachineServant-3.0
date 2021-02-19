@@ -9,6 +9,7 @@ import { SEO } from '../../components/seo';
 
 import { components, MainContent } from './styles';
 import { ByLine } from '../by-line';
+import { Tag } from '../tag';
 
 type BlogPostProps = {
   data: {
@@ -25,6 +26,8 @@ type BlogPostProps = {
         date: string;
         fromNow: string;
         featuredImage: ImageSharpFluidProps;
+        imageCredits: string;
+        imageAlt: string;
         socialImage: {
           childImageSharp: {
             resize: {
@@ -66,7 +69,8 @@ export const BlogPost: React.FC<BlogPostProps> = (props) => {
   return (
     <Layout
       image={post.frontmatter.featuredImage.childImageSharp.fluid}
-      imageAlt="temporary"
+      imageAlt={post.frontmatter.imageAlt || 'Featured Image'}
+      imageCredits={post.frontmatter.imageCredits}
       isLargeImage
       content={
         <>
@@ -98,6 +102,12 @@ export const BlogPost: React.FC<BlogPostProps> = (props) => {
           // @ts-ignore
           renderAst(post.htmlAst)
         }
+        <hr className="mb-4" />
+        <div className="flex flex-wrap justify-between">
+          {post.frontmatter.tags.map((tag) => (
+            <Tag value={tag} key={tag} />
+          ))}
+        </div>
         <hr className="mb-8" />
         <DiscussionEmbed {...disqusConfig} />
       </MainContent>

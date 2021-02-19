@@ -5,6 +5,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createRedirect, createPage } = actions;
 
   createRedirect({ fromPath: '/about', toPath: '/services' });
+  createRedirect({
+    fromPath: '/blog/2021-11-19-what-about-security',
+    toPath: '/blog/2021-01-19-what-about-security',
+  });
 
   const BlogPaginated = path.resolve('src/templates/BlogPaginated.tsx');
   const TaggedPosts = path.resolve('src/templates/TaggedPosts.tsx');

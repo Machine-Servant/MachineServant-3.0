@@ -11,6 +11,7 @@ type PostProps = {
     author: string;
     date: string;
     title: string;
+    tags: string[];
   };
   timeToRead: number;
   excerpt: string;
@@ -54,7 +55,7 @@ export const Post: React.FC<PostProps> = ({
               {title}
             </Link>
           </h2>
-          <p className="font-extralight">{excerpt}</p>
+          <p className="mb-4 font-extralight">{excerpt}</p>
         </div>
       </div>
     </div>

@@ -27,6 +27,8 @@ export const pageQuery = graphql`
             }
           }
         }
+        imageAlt
+        imageCredits
         socialImage: featuredImage {
           childImageSharp {
             resize(width: 1200) {
