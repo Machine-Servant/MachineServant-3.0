@@ -2,7 +2,7 @@
   "name": "machineservant-3.0",
   "private": false,
   "description": "MachineServant business home page",
-  "version": "0.1.40",
+  "version": "0.1.41",
   "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "react": "17.0.1",
@@ -27,7 +27,7 @@
     "cssnano": "4.1.10",
     "disqus-react": "1.0.10",
     "dotenv": "8.2.0",
-    "eslint": "7.19.0",
+    "eslint": "7.20.0",
     "eslint-config-react-app": "6.0.0",
     "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-import": "2.22.1",
