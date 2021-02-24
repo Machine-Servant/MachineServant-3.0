@@ -68,7 +68,7 @@
     "prettier": "2.2.1",
     "prismjs": "1.23.0",
     "react-github-btn": "1.2.0",
-    "react-hook-form": "6.15.1",
+    "react-hook-form": "6.15.4",
     "rehype-react": "6.2.0",
     "tailwindcss": "2.0.3",
     "twin.macro": "2.2.3",
