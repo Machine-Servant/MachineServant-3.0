@@ -53,7 +53,7 @@
     "gatsby-plugin-sharp": "2.14.1",
     "gatsby-plugin-sitemap": "2.12.0",
     "gatsby-plugin-transition-link": "1.20.5",
-    "gatsby-plugin-typegen": "2.2.2",
+    "gatsby-plugin-typegen": "2.2.4",
     "gatsby-plugin-typescript": "2.12.0",
     "gatsby-plugin-web-font-loader": "1.0.4",
     "gatsby-remark-images": "3.11.0",
