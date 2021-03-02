@@ -11,5 +11,8 @@ jobs:
         run: npm run lint
       - name: Build (generates typescript types for GraphQL)
         run: npm run build
+        env:
+          GATSBY_DISQUS_SHORTNAME: ${{ secrets.GATSBY_DISQUS_SHORTNAME }}
+          GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       - name: Run TypeScript Type Check
         run: npm run type-check
