@@ -2,7 +2,7 @@
   "name": "machineservant-3.0",
   "private": false,
   "description": "MachineServant business home page",
-  "version": "0.1.49",
+  "version": "0.1.50",
   "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "react": "17.0.1",
@@ -39,7 +39,7 @@
     "gatsby-image": "3.0.0",
     "gatsby-plugin-emotion": "6.0.0",
     "gatsby-plugin-eslint": "3.0.0",
-    "gatsby-plugin-fontawesome-css": "1.0.0",
+    "gatsby-plugin-fontawesome-css": "1.1.0",
     "gatsby-plugin-google-analytics": "3.0.0",
     "gatsby-plugin-image": "1.0.1",
     "gatsby-plugin-manifest": "3.0.0",
