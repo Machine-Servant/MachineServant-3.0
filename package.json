@@ -2,7 +2,7 @@
   "name": "machineservant-3.0",
   "private": false,
   "description": "MachineServant business home page",
-  "version": "0.1.51",
+  "version": "0.1.52",
   "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "react": "17.0.2",
@@ -61,7 +61,7 @@
     "gatsby-source-filesystem": "3.1.0",
     "gatsby-transformer-remark": "3.1.0",
     "gatsby-transformer-sharp": "3.1.0",
-    "gsap": "3.6.0",
+    "gsap": "3.6.1",
     "husky": "5.2.0",
     "lint-staged": "10.5.4",
     "postcss": "8.2.8",
