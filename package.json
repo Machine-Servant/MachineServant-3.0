@@ -62,7 +62,7 @@
     "gatsby-transformer-remark": "3.1.0",
     "gatsby-transformer-sharp": "3.1.0",
     "gsap": "3.6.1",
-    "husky": "6.0.0",
+    "husky": "^6.0.0",
     "lint-staged": "10.5.4",
     "postcss": "8.2.8",
     "prettier": "2.2.1",
@@ -88,7 +88,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
