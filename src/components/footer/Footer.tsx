@@ -83,12 +83,21 @@ export const Footer: React.FC = () => {
             )}
           </div>
           {social?.github && (
-            <span className="block mb-4">
+            <span className="block mb-3">
               <GithubButton href={social.github}>
                 Follow me @machine-servant
               </GithubButton>
             </span>
           )}
+          <span className="block mb-4">
+            <a
+              rel="me"
+              href="https://indieweb.social/@machineservant"
+              className="underline"
+            >
+              Join me on Mastodon
+            </a>
+          </span>
           <span className="block">
             ©{new Date().getFullYear()} by {title}.
           </span>
