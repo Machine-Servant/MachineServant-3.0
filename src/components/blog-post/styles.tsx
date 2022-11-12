@@ -53,7 +53,7 @@ export const Pre = styled.pre`
       margin-right: -3rem;
       margin-left: -3rem;
       padding-right: 1em;
-      padding-left: 0.75em;
+      padding-left: 2.7em;
       border-left: 0.25em solid #c9ade6;
 
       ${tw`bg-gray-700`}
