@@ -5,7 +5,15 @@ author: 'Evan Stern'
 featuredImage: ./featured.jpg
 imageAlt: 'Close-Up Photography of Green Leaves'
 imageCredits: 'Photo by Vasanth Babu from Pexels'
-tags: ['Web Development', 'Infrastructure', 'Cloud', 'Architecture', 'Tech']
+tags:
+  [
+    'Web Development',
+    'Infrastructure',
+    'Cloud',
+    'Architecture',
+    'Tech',
+    'Security',
+  ]
 keywords: ['Web Development']
 published: true
 ---
