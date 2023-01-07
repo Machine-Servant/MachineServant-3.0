@@ -34,7 +34,9 @@ export const H3 = styled.h3`
   ${tw`mb-8 text-xl font-medium`};
 `;
 
-export const H4 = styled.h4``;
+export const H4 = styled.h4`
+  ${tw`mb-4 uppercase text-sm font-bold`}
+`;
 
 export const H5 = styled.h5``;
 
