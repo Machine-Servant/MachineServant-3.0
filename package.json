@@ -2,7 +2,7 @@
   "name": "machineservant-3.0",
   "private": false,
   "description": "MachineServant business home page",
-  "version": "0.1.60",
+  "version": "0.1.61",
   "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "caniuse-lite": "^1.0.30001442",
@@ -20,7 +20,7 @@
     "@fortawesome/react-fontawesome": "0.1.14",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@types/react-helmet": "6.1.0",
+    "@types/react-helmet": "6.1.11",
     "@typescript-eslint/eslint-plugin": "4.20.0",
     "@typescript-eslint/parser": "4.20.0",
     "all-contributors-cli": "6.20.0",
