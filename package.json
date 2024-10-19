@@ -2,7 +2,7 @@
   "name": "machineservant-3.0",
   "private": false,
   "description": "MachineServant business home page",
-  "version": "0.1.60",
+  "version": "0.1.61",
   "author": "Evan Stern <evanstern@machineservant.com>",
   "dependencies": {
     "caniuse-lite": "^1.0.30001442",
@@ -69,7 +69,7 @@
     "prettier": "2.2.1",
     "prismjs": "1.23.0",
     "react-github-btn": "1.2.0",
-    "react-hook-form": "7.0.0",
+    "react-hook-form": "7.53.1",
     "rehype-react": "6.2.0",
     "tailwindcss": "2.0.4",
     "twin.macro": "2.4.1",
